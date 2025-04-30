@@ -2,11 +2,11 @@
 
 
 /*HEADING COMPONENT */
-
 #AboutUsTitle {
-    font-size: large;
+    font-weight: bold;
 }
 .HeadingBorder{
+
     
 }
 
@@ -15,7 +15,20 @@
 
 
 /*body component*/
+body {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)70%, rgba(0,0,0,0.5)70%), url(background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+    overflow: hidden;
+    margin: 0;
+  padding: 0;
+  object-fit: fill;
+}
 
+
+/*for text*/
 #AboutUsInfo{
     font-size: small;
     font-weight: bold;
