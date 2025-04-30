@@ -1,0 +1,23 @@
+/*About us page*/
+
+
+/*HEADING COMPONENT */
+
+#AboutUsTitle {
+    font-size: large;
+}
+.HeadingBorder{
+    
+}
+
+
+
+
+
+/*body component*/
+
+#AboutUsInfo{
+    font-size: small;
+    font-weight: bold;
+
+}
