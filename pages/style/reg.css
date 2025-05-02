@@ -1,5 +1,4 @@
 
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,6 +11,8 @@ body {
     background-size: cover;
     height: 109vh;
 }
+
+
 .form-container {
     max-width: 800px;
     margin: 0 auto;
@@ -26,11 +27,32 @@ body {
     margin: 0 -10px;
 }
 .form-group {
+    flex-direction: column;
     padding: 0 10px;
     margin-bottom: 15px;
     flex: 0 0 50%;
     box-sizing: border-box;
 }
+
+.form-group input {
+    border: 2px solid #f0f0f0;
+    display: block
+}
+
+.form-group input:focus {
+    outline: 0;
+}
+
+.form-group.success input {
+    border-color: #09c372;
+
+}
+
+.form-group.error input {
+    border-color: #ff3860;
+
+}
+
 label {
     display: block;
     margin-bottom: 5px;

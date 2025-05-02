@@ -33,6 +33,33 @@ body {
     font-size: 16px;
 }
 
+.inputValidation {
+    flex-direction: column;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    flex: 0 0 50%;
+    box-sizing: border-box;
+}
+
+.inputValidation input {
+    border: 2px solid #f0f0f0;
+    display: block
+}
+
+.inputValidation input:focus {
+    outline: 0;
+}
+
+.inputValidation.success input {
+    border-color: #09c372;
+
+}
+
+.inputValidation.error input {
+    border-color: #ff3860;
+
+}
+
 /* Login button */
 .login-container button {
     width: 100%;
