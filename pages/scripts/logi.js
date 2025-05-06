@@ -59,7 +59,7 @@ const validateInput = () => {
     }
 
     if (valid) {
-        alert("Registration successful!");
+        alert("Login successful!");
         form.submit();
     }
 }

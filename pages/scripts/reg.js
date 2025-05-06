@@ -9,6 +9,7 @@ const address = document.getElementById("address")
 const city = document.getElementById("city")
 const password = document.getElementById("password")
 const repeatPassword = document.getElementById("repeatPassword")
+const termsCheckbox = document.getElementById("termsConditions")
 const error = document.getElementById("error")
 
 form.addEventListener("submit", (e) => {
@@ -59,6 +60,7 @@ const validateInput = () => {
     const cityValue = city.value.trim();
     const passwordValue = password.value.trim();
     const repeatPasswordValue = repeatPassword.value.trim();
+    const termsCheckboxTicked = termsCheckbox.checked;
 
     let valid = true;
 
@@ -150,7 +152,7 @@ const validateInput = () => {
         setSuccess(repeatPassword);
     }
 
-    if (!termsCheckbox.checked) {
+    if (!termsCheckboxTicked) {
         setError(termsCheckbox, "You must agree to the terms");
         valid = false;
     } else {
