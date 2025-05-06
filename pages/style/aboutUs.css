@@ -60,6 +60,7 @@ body {
 
 }
 
+/*for the image next to the text*/
 #AboutUsInfo img{
     width: 150px; /* or whatever size you want */
     height: auto;
@@ -79,3 +80,6 @@ body {
 
 
 }*/
+
+
+/* change title, shift to right, rewrite text "about us" page below*/
