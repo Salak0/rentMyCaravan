@@ -1,5 +1,4 @@
 <?php
-session_start();
 include('header.php');
 ?>
 
@@ -35,3 +34,6 @@ include('footer.php'); // Optional if you have a footer
 ?>
 </body>
 </html>
+
+
+<?php include('footer.php'); ?>
