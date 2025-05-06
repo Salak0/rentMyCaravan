@@ -1,31 +1,41 @@
-<?php 
-
-require('Config/connection.php');
+<?php
+session_start(); // Important to start session if you’re using session variables
+require('db.php');
 
 // Check if the user is logged in
-if(isset($_SESSION["email_id"])) {
-    // If logged in, set the $loggedIn variable to true
-    $loggedIn = true;
-} else {
-    // If not logged in, set the $loggedIn variable to false
-    $loggedIn = false;
-}
-
+$loggedIn = isset($_SESSION["email_id"]);
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RentACaravan</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Adjust to your actual CSS path -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body>
+
 <div class="main">
-        <!-- Navigation bar -->
-        <nav class="navbar">
-            <div class="icon">
-                <h2 class="logo">RentACaravan</h2>
-                <div class="quote-container">
-                    <p class="quote-content">"A journey of a thousand miles<br>begins with a single click"</p>
-                </div>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="icon">
+            <h2 class="logo">RentACaravan</h2>
+            <div class="quote-container">
+                <p class="quote-content">"A journey of a thousand miles<br>begins with a single click"</p>
             </div>
-            <div class="buttons">
-                <button type="button" class="login"><span class="material-symbols-outlined">
-                    login
-                    </span>Login</button>
+        </div>
+        <div class="buttons">
+            <?php if ($loggedIn): ?>
+                <span>Welcome, <?= htmlspecialchars($_SESSION["email_id"]); ?></span>
+                <a href="logout.php"><button type="button">Logout</button></a>
+            <?php else: ?>
+                <button type="button" class="login">
+                    <span class="material-symbols-outlined">login</span>Login
+                </button>
                 <button type="button" class="register">Register</button>
-            </div>
-        </nav>
+            <?php endif; ?>
+        </div>
+    </nav>
+
+<?php include('footer.php'); ?>
