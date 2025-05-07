@@ -11,10 +11,6 @@ opacity: 1;    }
 }
 
 
-/*text animation*/
-@keyframes fadeIn {
-    
-}
 
 /*HEADING COMPONENT */
 #PageTitle {
@@ -36,10 +32,6 @@ opacity: 1;    }
     
 }
 
-#PageTitle a:hover{
-    color: lightgray;
-
-}
 
 
 
