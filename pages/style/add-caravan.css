@@ -1,0 +1,130 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.form {
+  background: #fff;
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.header h2 {
+  margin-top: 0;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.pagination .number {
+  background: #ccc;
+  color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.pagination .bar {
+  flex: 1;
+  height: 4px;
+  background: #ccc;
+  margin: 0 5px;
+}
+
+.pagination .number.active,
+.pagination .bar.active {
+  background: #2c6add;
+}
+
+.steps .step {
+  display: none;
+}
+
+.steps .step.active {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.col {
+  flex: 1 1 45%;
+}
+
+.radio input {
+  display: none; 
+}
+
+.radio label {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #bbb;
+  border-radius: 15px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.radio input:checked + label{
+  background: #2c6add;
+  color: #fff;
+}
+
+.col.fuel-col {
+  margin-left: auto;
+  max-width: 45%; 
+}
+
+.col.sleep-col {
+  margin-left: auto;
+  max-width: 45%; 
+}
+
+.dropdown select,
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+.navigation {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation button {
+  padding: 10px 20px;
+  background: #2c6add;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navigation button:disabled {
+  background: #ccc;
+  cursor: default;
+}
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

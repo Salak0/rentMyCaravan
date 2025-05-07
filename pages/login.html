@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login - RentACaravan</title>
+    <link rel="stylesheet" href="style/login.css">
+    <script defer src="scripts/logi.js"></script>
+</head>
+<body>
+    <div class="main-login">
+        <div class="login-container">
+            <a href="index.html" class="returnArrow"><img src="style/returnArrow.svg"></a>
+            <h2>Welcome! <br>Please Sign In</h2>
+            <form id= "form" action="dashboard.html" method="POST">
+                <div class="inputValidation">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email">
+                    <div class="error"></div>
+                </div>
+                <div class="inputValidation">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                    <div class="error"></div>
+                </div>
+                <button type="submit" class="button">Login</button>
+            </form>
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </div>
+    </div>
+</body>
+</html>
