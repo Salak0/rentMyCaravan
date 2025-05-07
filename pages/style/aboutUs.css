@@ -79,9 +79,13 @@ body {
 
 
 /*for text*/
+#AboutUsTitle{
+    padding-left: 100px;
+
+}
 #AboutUsIntro{
     font-size: small;
-    font-weight: bold;
+
     padding: 20px;
     align-items: center;
     display: flex;
@@ -90,9 +94,13 @@ body {
     margin: 20px 20px 20px 20px;
 
 }
+#OurValuesTitle{
+    padding-left: 100px;
+
+}
 #OurValues{
     font-size: small;
-    font-weight: bold;
+    
     padding: 20px;
     align-items: center;
     display: flex;
