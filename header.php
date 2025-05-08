@@ -38,4 +38,3 @@ $loggedIn = isset($_SESSION["email_id"]);
         </div>
     </nav>
 
-<?php include('footer.php'); ?>

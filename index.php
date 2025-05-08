@@ -28,10 +28,6 @@ include('header.php');
         </div>
     </div>
 </section>
-
-<?php
-include('footer.php'); // Optional if you have a footer
-?>
 </body>
 </html>
 
