@@ -1,5 +1,6 @@
 <?php
 require('db.php'); // Ensure this file connects to the database
+include('header.php');
 
 $loginError = '';
 

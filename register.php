@@ -1,5 +1,6 @@
 <?php
 require('db.php');
+include('header.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect and sanitize inputs
