@@ -30,10 +30,12 @@ $loggedIn = isset($_SESSION["email_id"]);
                 <span>Welcome, <?= htmlspecialchars($_SESSION["email_id"]); ?></span>
                 <a href="logout.php"><button type="button">Logout</button></a>
             <?php else: ?>
-                <button type="button" class="login">
-                    <span class="material-symbols-outlined">login</span>Login
-                </button>
-                <button type="button" class="register">Register</button>
+                <div class="buttons">
+                    <button type="button" class="login" onclick="location.href='login.php'">
+                        <span class="material-symbols-outlined">login</span>Login
+                    </button>
+                    <button type="button" class="register" onclick="location.href='register.php'">Register</button>
+                </div>
             <?php endif; ?>
         </div>
     </nav>
