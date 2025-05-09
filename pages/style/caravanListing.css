@@ -32,6 +32,13 @@ opacity: 1;    }
     
 }
 
+/*listings title*/
+#caravanListingTitle{
+    text-align: center;
+    padding-right: 30px;
+
+}
+
 
 
 
@@ -66,7 +73,6 @@ body {
     width: 100%;
     font-family: Arial;
 
-    /*background: linear-gradient(to top, rgba(0,0,0,0.5)70%, rgba(0,0,0,0.5)70%), url(background.jpg);*/
     background-color: white;
     background-position: center;
     background-size: cover;
