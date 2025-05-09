@@ -1,0 +1,96 @@
+/*About us page*/
+
+/*defining the animation for the heading*/
+@keyframes fade-in {
+    from{
+        opacity: 0;
+
+    }
+    to{
+opacity: 1;    }
+}
+
+
+
+/*HEADING COMPONENT */
+#PageTitle {
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    font-family: Arial;
+    padding-left: 15px;
+    /*animation for heading*/
+    animation-name: fade-in;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    
+}
+/*adding colour and hover*/
+#PageTitle a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+
+
+
+
+#HeadingBorder{
+    background-color: #007bff;
+    
+        
+    text-align: left;
+    width: 100%;
+
+    background-color: #007bff;
+    height: 80px; /* adjust as needed */
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+    color: black;
+    
+
+
+
+    
+}
+
+
+
+
+
+/*body component*/
+body {
+    width: 100%;
+    font-family: Arial;
+
+    /*background: linear-gradient(to top, rgba(0,0,0,0.5)70%, rgba(0,0,0,0.5)70%), url(background.jpg);*/
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+    overflow: hidden;
+    margin: 0;
+  padding: 0;
+  object-fit: fill;
+}
+
+
+/*for text*/
+#caravanListingTitle{
+    padding-left: 100px;
+
+}
+#caravanListingIntro{
+    font-size: small;
+
+    padding: 20px;
+    align-items: center;
+    display: flex;
+    
+    
+    margin: 20px 20px 20px 20px;
+
+}
