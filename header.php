@@ -31,7 +31,16 @@ $loggedIn = isset($_SESSION["email_id"]);
             <a href="index.php" class="nav-button">Home</a>
             <a href="listings.php" class="nav-button">Listings</a>
             <a href="aboutUs.php" class="nav-button">About Us</a>
+            <?php if ($loggedIn): ?>
+        <a href="addCaravan.php" class="nav-button add-listing">Add Listing</a>
+        <a href="myRentals.php" class="nav-button">My Rentals</a>
+        <a href="myListings.php" class="nav-button">My Listings</a> 
+    <?php endif; ?>
+        
+        
+        
         </div>
+
 
         <!-- Login/Register or Logout -->
         <div class="buttons">
@@ -46,3 +55,20 @@ $loggedIn = isset($_SESSION["email_id"]);
             <?php endif; ?>
         </div>
     </nav>
+</div>
+
+<!-- Optional styling -->
+<style>
+    .nav-button.add-listing {
+        background-color: #4CAF50;
+        color: white;
+        padding: 8px 14px;
+        border-radius: 4px;
+        text-decoration: none;
+        margin-left: 10px;
+    }
+
+    .nav-button.add-listing:hover {
+        background-color: #45a049;
+    }
+</style>

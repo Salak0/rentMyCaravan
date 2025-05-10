@@ -1,13 +1,19 @@
 <?php
 require 'db.php';
+session_start(); // Ensure session is started to access $_SESSION
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (!isset($_SESSION["email_id"])) {
+        die("User not logged in.");
+    }
+
+    $email_id = $_SESSION["email_id"]; // Logged-in user's email
+
     // Prepare and sanitize inputs
     $make = $_POST['make'] ?? '';
     $model = $_POST['model'] ?? '';
     $reg = $_POST['reg'] ?? '';
     $name = $make . " " . $model . " (" . $reg . ")";
-
     $description = $_POST['description'] ?? '';
     $price_per_day = $_POST['price_per_day'] ?? 0;
     $caravan_address = $_POST['caravan_address'] ?? '';
@@ -30,10 +36,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // SQL insert statement
+    // SQL insert including email_id
     $query = "INSERT INTO caravans 
-    (name, description, price_per_day, image_url, caravan_address, caravan_postcode, mileage, make, model, trans_type, caravan_type) 
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    (name, description, price_per_day, image_url, caravan_address, caravan_postcode, mileage, make, model, trans_type, caravan_type, email_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     $stmt = $conn->prepare($query);
     if (!$stmt) {
@@ -41,9 +47,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $stmt->bind_param(
-        "ssdsssissss", 
+        "ssdsssisssss", 
         $name, $description, $price_per_day, $image_url, $caravan_address, $caravan_postcode,
-        $mileage, $make, $model, $trans_type, $caravan_type
+        $mileage, $make, $model, $trans_type, $caravan_type, $email_id
     );
 
     if ($stmt->execute()) {
@@ -57,6 +63,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 ?>
+
+
 
 
 
