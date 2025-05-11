@@ -1,6 +1,6 @@
 <?php
-session_start();
 require 'db.php';
+include('header.php');
 
 if (!isset($_SESSION['email_id'])) {
     header("Location: login.php");
@@ -10,13 +10,12 @@ if (!isset($_SESSION['email_id'])) {
 $customer_id = $_SESSION['email_id'];
 
 // Fetch rentals for this customer
-$sql = "
-    SELECT r.*, c.name, c.description, c.image_url, c.price_per_day
-    FROM rentals r
-    JOIN caravans c ON r.caravan_id = c.caravan_id
-    WHERE r.customer_id = ?
-    ORDER BY r.loan_date DESC
-";
+$sql = "SELECT r.rental_id, r.caravan_id, r.loan_date, r.return_date, r.isReturned, r.total_price,
+               c.make, c.model, c.description, c.caravan_address, c.price_per_day
+        FROM rentals r
+        JOIN caravans c ON r.caravan_id = c.caravan_id
+        WHERE r.customer_id = ? AND r.isReturned = 0";
+
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $customer_id);
@@ -36,7 +35,7 @@ $result = $stmt->get_result();
 <?php if ($result->num_rows > 0): ?>
     <?php while ($row = $result->fetch_assoc()): ?>
         <div class="rental-item">
-            <h2><?= htmlspecialchars($row['name']) ?></h2>
+            <h2><?= htmlspecialchars($row['make']) ?></h2>
             <img src="<?= htmlspecialchars($row['image_url']) ?>" width="300">
             <p><?= htmlspecialchars($row['description']) ?></p>
             <p><strong>From:</strong> <?= $row['loan_date'] ?> | <strong>To:</strong> <?= $row['return_date'] ?></p>

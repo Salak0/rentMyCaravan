@@ -1,6 +1,6 @@
 <?php
-session_start();
 require 'db.php';
+include('header.php');
 
 $loggedIn = isset($_SESSION['email_id']);
 
@@ -23,6 +23,9 @@ $result = $conn->query($sql);
         <h2><?= htmlspecialchars($row['name']) ?></h2>
         <img src="<?= htmlspecialchars($row['image_url']) ?>" width="300">
         <p><?= htmlspecialchars($row['description']) ?></p>
+        <p><strong>Mileage:</strong> <?= $row['mileage'] ?></p>
+        <p><strong>Transmission Type:</strong> <?= $row['trans_type'] ?></p>
+        <p><strong>Caravan Type:</strong> <?= $row['caravan_type'] ?></p>
         <p><strong>Price/day:</strong> £<?= $row['price_per_day'] ?></p>
         <?php if ($loggedIn): ?>
             <a href="rentCaravan.php?id=<?= $row['caravan_id'] ?>"><button>Rent this caravan</button></a>

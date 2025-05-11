@@ -1,6 +1,6 @@
 <?php
 require 'db.php';
-session_start(); // Ensure session is started to access $_SESSION
+include('header.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!isset($_SESSION["email_id"])) {
