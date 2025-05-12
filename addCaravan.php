@@ -74,8 +74,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
   <meta charset="UTF-8">
   <title>Caravan Listing Form</title>
-  <link rel="stylesheet" href="style/add-caravan.css">
-  <script defer src="scripts/addCaravan.js"></script>
+  <link rel="stylesheet" href="pages\style\add-caravan.css">
+  <script defer src="pages\scripts\addCaravan.js"></script>
 </head>
 <body>
 

@@ -33,11 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="en">
 <head>
     <title>Login - RentACaravan</title>
-<<<<<<< HEAD:pages/php/login.php
     <link rel="stylesheet" href="pages/style/login.css">
-=======
-    <link rel="stylesheet" href="style/login.css">
->>>>>>> parent of 79259f2 (big update):login.php
 </head>
 <body>
     <div class="main-login">

@@ -10,7 +10,7 @@ include('header.php');
 
 <head>
     <title>RentACaravan</title>
-    <link rel="stylesheet" href="style/aboutUs.css">
+    <link rel="stylesheet" href="pages/style/aboutUs.css">
 
 </head>
 

@@ -3,6 +3,8 @@ include('header.php');
 ?>
 
 <!-- Caravan Listing Section -->
+     <link rel="stylesheet" href="pages/style/index.css">
+
 <section class="caravan-list">
     <h2 id="featcar">Featured Caravans</h2>
     <div class="caravan-container">
