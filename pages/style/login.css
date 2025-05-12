@@ -68,10 +68,6 @@ label {
 
 }
 
-.error .error {
-    color: #ff3860;
-}
-
 /* Login button */
 .login-container button {
     width: 100%;
