@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="en">
 <head>
     <title>Login - RentACaravan</title>
-    <link rel="stylesheet" href="style/login.css">
+    <link rel="stylesheet" href="pages/style/login.css">
 </head>
 <body>
     <div class="main-login">
