@@ -1,24 +1,53 @@
 /*About us page*/
 
+/*defining the animation for the heading*/
+@keyframes fade-in {
+    from{
+        opacity: 0;
+
+    }
+    to{
+opacity: 1;    }
+}
+
+
 
 /*HEADING COMPONENT */
-#AboutUsTitle {
+#PageTitle {
     font-weight: bold;
-    text-align: center;
+    text-align: left;
+    color: #fff;
+    font-family: Arial;
+    padding-left: 15px;
+    /*animation for heading*/
+    animation-name: fade-in;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
     
 }
+/*adding colour and hover*/
+#PageTitle a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+
+
+
+
 #HeadingBorder{
     background-color: #007bff;
     
         
-    text-align: center;
+    text-align: left;
     width: 100%;
 
     background-color: #007bff;
     height: 80px; /* adjust as needed */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     width: 100%;
     color: black;
     
@@ -35,6 +64,8 @@
 /*body component*/
 body {
     width: 100%;
+    font-family: Arial;
+
     /*background: linear-gradient(to top, rgba(0,0,0,0.5)70%, rgba(0,0,0,0.5)70%), url(background.jpg);*/
     background-color: white;
     background-position: center;
@@ -48,9 +79,28 @@ body {
 
 
 /*for text*/
-#AboutUsInfo{
+#AboutUsTitle{
+    padding-left: 100px;
+
+}
+#AboutUsIntro{
     font-size: small;
-    font-weight: bold;
+
+    padding: 20px;
+    align-items: center;
+    display: flex;
+    
+    
+    margin: 20px 20px 20px 20px;
+
+}
+#OurValuesTitle{
+    padding-left: 100px;
+
+}
+#OurValues{
+    font-size: small;
+    
     padding: 20px;
     align-items: center;
     display: flex;
@@ -60,10 +110,16 @@ body {
 
 }
 
+
 /*for the image next to the text*/
-#AboutUsInfo img{
-    width: 150px; /* or whatever size you want */
+#AboutUsIntro img{
+    width: 250px; /* or whatever size you want */
     height: auto;
+}
+#OurValues img{
+    width: 250px; /* or whatever size you want */
+    height: auto;
+    padding-right: 10px;
 }
 
 

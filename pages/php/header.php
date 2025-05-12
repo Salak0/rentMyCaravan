@@ -11,7 +11,7 @@ $loggedIn = isset($_SESSION["email_id"]);
 <head>
     <meta charset="UTF-8">
     <title>RentACaravan</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Adjust if your stylesheet has a different name -->
+    <link rel="stylesheet" href="/website/css/index.css"> <!-- Adjust if your stylesheet has a different name -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <body>
@@ -36,11 +36,8 @@ $loggedIn = isset($_SESSION["email_id"]);
         <a href="myRentals.php" class="nav-button">My Rentals</a>
         <a href="myListings.php" class="nav-button">My Listings</a> 
     <?php endif; ?>
-        
-        
-        
-        </div>
 
+        </div>
 
         <!-- Login/Register or Logout -->
         <div class="buttons">
@@ -57,18 +54,4 @@ $loggedIn = isset($_SESSION["email_id"]);
     </nav>
 </div>
 
-<!-- Optional styling -->
-<style>
-    .nav-button.add-listing {
-        background-color: #4CAF50;
-        color: white;
-        padding: 8px 14px;
-        border-radius: 4px;
-        text-decoration: none;
-        margin-left: 10px;
-    }
 
-    .nav-button.add-listing:hover {
-        background-color: #45a049;
-    }
-</style>

@@ -30,26 +30,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <link rel="stylesheet" href="style/reg.css">
-    <script defer src="scripts/reg.js"></script>
+    <link rel="stylesheet" href="/website/css/reg.css">
+    <script defer src="/website/css/reg.js"></script>
 </head>
 <body>
     <div class="main-reg">
         <div class="form-container">
-            <form id="registration-form" action="register.php" method="POST">
-                <a href="index.php" class="returnArrow"><img src="style/returnArrow.svg" alt="Return"></a>
+            <form id="registration-form" action="dashboard.html" method="POST">
+                <a href="index.html" class="returnArrow"><img src="style/returnArrow.svg"></a>
                 <h2>Welcome! <br>Please Sign In</h2>
 
                 <div class="form-row">
+                    <!-- Left Column -->
                     <div class="form-group">
                         <label for="firstName">First Name:</label>
-                        <input type="text" id="firstName" name="firstName" required>
+                        <input type="text" id="firstName" name="firstName" >
                         <div class="error"></div>
                     </div>
-
+                    
+                    <!-- Right Column -->
                     <div class="form-group">
                         <label for="lastName">Last Name:</label>
-                        <input type="text" id="lastName" name="lastName" required>
+                        <input type="text" id="lastName" name="lastName" >
+                        <div class="error"></div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dateOfBirth">Date of Birth:</label>
+                        <input type="date" id="dateOfBirth" name="dateOfBirth" >
+                        <div class="error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" >
                         <div class="error"></div>
                     </div>
                 </div>
@@ -57,13 +73,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="form-row">
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="text" id="email" name="email" >
                         <div class="error"></div>
                     </div>
-
+                    
                     <div class="form-group">
                         <label for="postcode">Postcode:</label>
-                        <input type="text" id="postcode" name="postcode" required>
+                        <input type="text" id="postcode" name="postcode" >
                         <div class="error"></div>
                     </div>
                 </div>
@@ -71,31 +87,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="form-row">
                     <div class="form-group">
                         <label for="address">Address:</label>
-                        <input type="text" id="address" name="address" required>
+                        <input type="text" id="address" name="address" >
                         <div class="error"></div>
                     </div>
-
-                <div class="form-row">
+                    
                     <div class="form-group">
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required>
-                        <div class="error"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="repeatPassword">Repeat Password:</label>
-                        <input type="password" id="repeatPassword" name="repeatPassword" required>
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" >
                         <div class="error"></div>
                     </div>
                 </div>
+                
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" >
+                        <div class="error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="repeatPassword">Repeat Password:</label>
+                        <input type="password" id="repeatPassword" name="repeatPassword" >
+                        <div class="error"></div>
+                    </div>
+                </div>                              
 
                 <div class="form-row">
                     <div class="form-group">
                         <div class="checkbox-group">
-                            <input type="checkbox" id="termsConditions" name="termsConditions" required>
-                            <label for="termsConditions" style="display: inline; font-weight: normal;">
-                                I agree to the Terms and Conditions
-                            </label>
+                            <input type="checkbox" id="termsConditions" name="termsConditions" >
+                            <label for="termsConditions" style="display: inline; font-weight: normal;">I agree to the Terms and Conditions</label>
                         </div>
                     </div>
                     <div class="form-group full-width">

@@ -37,6 +37,7 @@
         <div class="col">
           <label for="reg">Registration Number</label>
           <input type="text" id="reg" name="reg">
+          <div class="error"></div>
         </div>
       </div>
       <div class="navigation">
@@ -61,22 +62,27 @@
             <input type="radio" id="body-motorhome" name="bodyType">
             <label for="body-motorhome">Motorhome Caravan</label>
           </div>
+        <div class="error"></div>
         </div>
         <div class="col">
           <label for="make">Make</label>
           <input type="text" id="make" name="make">
+          <div class="error"></div>
         </div>
         <div class="col">
           <label for="model">Model</label>
           <input type="text" id="model" name="model">
+          <div class="error"></div>
         </div>
         <div class="col">
           <label for="year">Year</label>
           <input type="number" id="year" name="year">
+          <div class="error"></div>
         </div>
         <div class="col">
           <label for="mileage">Mileage</label>
           <input type="number" id="mileage" name="mileage">
+          <div class="error"></div>
         </div>
         
         <div class="col">
@@ -88,6 +94,7 @@
               <input type="radio" id="trans-manual" name="transmission" value="manual">
               <label for="trans-manual">Manual</label>
             </div>
+            <div class="error"></div>
         </div>
           
         <div class="col sleep-col">
@@ -130,8 +137,10 @@
       <h4>Caravan Description</h4>
       <p><label for="description">Tell us more about your caravan and what makes it special</label></p>
       <textarea name="description" id="description" rows="6" cols="60"></textarea>
+      <div class="error"></div>
       <p>Upload images of your caravan here</p>
       <input type="file" id="caravanImage" name="caravanImage">
+      <div class="error"></div>
       <div class="navigation">
         <button type="button" class="prev">Previous</button>
         <button type="button" class="next">Next</button>
@@ -146,6 +155,7 @@
         <div class="col">
           <label for="address1">Address Line 1</label>
           <input type="text" id="address1" name="address1">
+          <div class="error"></div>
         </div>
         <div class="col">
           <label for="address2">Address Line 2</label>
@@ -154,10 +164,12 @@
         <div class="col">
           <label for="city">City</label>
           <input type="text" id="city" name="city">
+          <div class="error"></div>
         </div>
         <div class="col">
           <label for="postcode">Postcode</label>
           <input type="text" id="postcode" name="postcode">
+          <div class="error"></div>
         </div>
       </div>
       <div class="navigation">
@@ -174,6 +186,7 @@
         <div class="col">
           <label for="price">Price per day</label>
           <input type="number" id="price" name="price">
+          <div class="error"></div>
         </div>
       </div>
       <div class="navigation">

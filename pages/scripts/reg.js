@@ -13,9 +13,10 @@ const termsCheckbox = document.getElementById("termsConditions")
 const error = document.getElementById("error")
 
 form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    validateInput();
+   const isValid = validateInput();
+    if (!isValid) {
+        e.preventDefault(); // Block form if there are errors
+    }
 });
 
 const setError = (element, message) => {
