@@ -11,7 +11,7 @@ $loggedIn = isset($_SESSION["email_id"]);
 <head>
     <meta charset="UTF-8">
     <title>RentACaravan</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Adjust if your stylesheet has a different name -->
+    <link rel="stylesheet" href="pages\style\index.css"> <!-- Adjust if your stylesheet has a different name -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <body>

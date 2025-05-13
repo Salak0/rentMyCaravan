@@ -1,3 +1,4 @@
+
 body {
   font-family: Arial, sans-serif;
   background: #f4f4f4;
@@ -122,6 +123,19 @@ textarea {
   cursor: default;
 }
 
+.error input, .error select, .error textarea {
+  border: 2px solid red;
+}
+
+.success input, .success select, .success textarea {
+  border: 2px solid green;
+}
+
+.error .error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
 
 
 @keyframes fadeIn {
