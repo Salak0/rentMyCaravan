@@ -18,24 +18,21 @@ $loggedIn = isset($_SESSION["email_id"]);
 
 <div class="main">
     <!-- Navigation bar -->
-    <nav class="navbar">
-        <div class="icon">
-            <h2 class="logo">RentACaravan</h2>
-            <div class="quote-container">
-                <p class="quote-content">"A journey of a thousand miles<br>begins with a single click"</p>
-            </div>
-        </div>
-
-        <!-- New navigation links -->
+    <header class="header">
+        <h2 class="logo">RentACaravan</h2>
         <div class="nav-links">
-            <a href="index.php" class="nav-button">Home</a>
-            <a href="listings.php" class="nav-button">Listings</a>
-            <a href="aboutUs.php" class="nav-button">About Us</a>
+            <a href="login.php" class="nav-link">Login</a>
+            <a href="register.php" class="nav-link">Register</a>
+            
+            <a href="index.php" class="nav-link">Home</a>
+            <a href="listings.php" class="nav-link">Listings</a>
+            <a href="aboutUs.php" class="nav-link">About Us</a>
             <?php if ($loggedIn): ?>
-        <a href="addCaravan.php" class="nav-button add-listing">Add Listing</a>
-        <a href="myRentals.php" class="nav-button">My Rentals</a>
-        <a href="myListings.php" class="nav-button">My Listings</a> 
-    <?php endif; ?>
+            <a href="addCaravan.php" class="nav-link">Add Listing</a>
+            <a href="myRentals.php" class="nav-link">My Rentals</a>
+            <a href="myListings.php" class="nav-link">My Listings</a> 
+            <?php endif; ?>
+    </header>
         
         
         
