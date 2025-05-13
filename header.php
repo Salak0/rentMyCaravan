@@ -31,8 +31,6 @@ $loggedIn = isset($_SESSION["email_id"]);
             <a href="listings.php" class="nav-link">Listings</a>
             <a href="aboutUs.php" class="nav-link">About Us</a>
             <?php if ($loggedIn):?>
-            
-                
                 
                 <a href="addCaravan.php" class="nav-link">Add Listing</a>
                 <a href="myRentals.php" class="nav-link">My Rentals</a>
@@ -43,15 +41,15 @@ $loggedIn = isset($_SESSION["email_id"]);
             
             <?php endif; ?>
 
-            <div class="nav-link">
+            <div class="nav-button">
                 <?php if ($loggedIn): ?>
                     <span class="welcome-msg">Welcome, <?= htmlspecialchars($_SESSION["email_id"]); ?></span>
                     <a href="logout.php"><button type="button">Logout</button></a>
                 <?php else: ?>
-                    <button type="button" class="login" onclick="location.href='login.php'">
+                    <button type="button" id="logBut" onclick="location.href='login.php'">
                         <span class="material-symbols-outlined">login</span>Login
                     </button>
-                    <button type="button" class="register" onclick="location.href='register.php'">Register</button>
+                    <button type="button"  onclick="location.href='register.php'">Register</button>
                 <?php endif; ?>
             </div>
 
