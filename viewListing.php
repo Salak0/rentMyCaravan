@@ -41,6 +41,7 @@ $caravan = $result->fetch_assoc();
         <p><strong>Mileage:</strong> <?= htmlspecialchars($caravan['mileage']) ?></p>
         <p><strong>Transmission:</strong> <?= htmlspecialchars($caravan['trans_type']) ?></p>
         <p><strong>Caravan Type:</strong> <?= htmlspecialchars($caravan['caravan_type']) ?></p>
+        <p><strong>Beds:</strong> <?= htmlspecialchars($caravan['sleeps']) ?></p>
         <p><strong>Location:</strong> <?= htmlspecialchars($caravan['caravan_address']) ?></p>
         <p><strong>Price per day:</strong> £<?= htmlspecialchars($caravan['price_per_day']) ?></p>
 
