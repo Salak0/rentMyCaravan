@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Prepare and sanitize inputs
     $make = $_POST['make'] ?? '';
     $model = $_POST['model'] ?? '';
-    $reg = $_POST['reg'] ?? '';
+    $reg = $_POST['name'] ?? ''; // Registration
     $name = $make . " " . $model . " (" . $reg . ")";
     $description = $_POST['description'] ?? '';
     $price_per_day = $_POST['price_per_day'] ?? 0;
@@ -21,6 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mileage = $_POST['mileage'] ?? 0;
     $trans_type = $_POST['trans_type'] ?? '';
     $caravan_type = $_POST['caravan_type'] ?? '';
+    $sleeps = $_POST['bed'] ?? 1;
+    $fuel_type = $_POST['fuel'] ?? '';
 
     // Handle image upload
     $image_url = '';
@@ -36,10 +38,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // SQL insert including email_id
+    // SQL insert including email_id, sleeps, fuel_type
     $query = "INSERT INTO caravans 
-    (name, description, price_per_day, image_url, caravan_address, caravan_postcode, mileage, make, model, trans_type, caravan_type, email_id) 
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    (name, description, price_per_day, image_url, caravan_address, caravan_postcode, mileage, make, model, trans_type, caravan_type, sleeps, fuel_type, email_id) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     $stmt = $conn->prepare($query);
     if (!$stmt) {
@@ -47,9 +49,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $stmt->bind_param(
-        "ssdsssisssss", 
+        "ssdsssisssssis", 
         $name, $description, $price_per_day, $image_url, $caravan_address, $caravan_postcode,
-        $mileage, $make, $model, $trans_type, $caravan_type, $email_id
+        $mileage, $make, $model, $trans_type, $caravan_type, $sleeps, $fuel_type, $email_id
     );
 
     if ($stmt->execute()) {
@@ -65,20 +67,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Caravan Listing Form</title>
-  <link rel="stylesheet" href="pages\style\add-caravan.css">
-  <script defer src="pages\scripts\addCaravan.js"></script>
+  <link rel="stylesheet" href="pages/style/add-caravan.css">
+  <script defer src="pages/scripts/addCaravan.js"></script>
 </head>
 <body>
-
+<br>
+<br>
 <form class="form" method="POST" action="addCaravan.php" enctype="multipart/form-data">
   <div class="header">
     <h2>Create a caravan listing</h2>
@@ -107,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="grid">
         <div class="col">
           <label for="reg">Registration Number</label>
-          <input type="text" id="reg" name="name" required>
+          <input type="text" id="reg" name="reg" required>
         </div>
       </div>
       <div class="navigation">
@@ -123,7 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="grid">
         <div class="col">
           <div class="radio">
-            <input type="radio" id="body-trailer" name="caravan_type" value="Trailer Caravan">
+            <input type="radio" id="body-trailer" name="caravan_type" value="Trailer Caravan" required>
             <label for="body-trailer">Trailer Caravan</label>
           </div>
         </div>
@@ -152,7 +151,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="col">
           <p>Select transmission type</p>
           <div class="radio">
-            <input type="radio" id="trans-auto" name="trans_type" value="Automatic">
+            <input type="radio" id="trans-auto" name="trans_type" value="Automatic" required>
             <label for="trans-auto">Automatic</label>
             <input type="radio" id="trans-manual" name="trans_type" value="Manual">
             <label for="trans-manual">Manual</label>
@@ -198,7 +197,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <p><label for="description">Tell us more about your caravan and what makes it special</label></p>
       <textarea name="description" id="description" rows="6" cols="60" required></textarea>
       <p>Upload images of your caravan here</p>
-      <input type="file" id="caravanImage" name="caravanImage" required>
+      <input type="file" id="caravanImage" name="caravanImage" accept="image/*" required>
       <div class="navigation">
         <button type="button" class="prev">Previous</button>
         <button type="button" class="next">Next</button>

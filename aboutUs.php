@@ -8,33 +8,30 @@ include('header.php');
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=login" />
 
-<head>
-    <title>RentACaravan</title>
+
     <link rel="stylesheet" href="pages/style/aboutUs.css">
 
-</head>
+
 
 <body>
     <div class="AboutUsPage">
-
         <div id="HeadingBorder">
-            <h1 id="AboutUsTitle"> About Us</h1> <!-- title -->
+            <h1 id="PageTitle"><a href="index.html">RentMyCaravan</a></h1> <!-- title -->
         </div>
-
         <div id="text-body">
-        <h2 id="AboutUsTitle">About Us</h2>
+            <h2 id="AboutUsTitle">About Us</h2>
             <p id="AboutUsIntro"> Rent  my caravan has been the UKs No1 caravan renting site for 15 years,
                 thank to our family values, that we have been incorporating throughout 
                 the whole of our business.
                 which started in 2005 when Eddie Bican, the founder of rentMyCaravan was 
                 trying to find a way to keep his prized caravan instead of selling it.  
                 <!--the caravan image-->
-                <img src="style\caravan1.jpg" alt="caravan1">
+                <img id="caravanImg" src="pages\style\caravan1.jpg" alt="caravan1">
 
             </p>
             <h5 id="OurValuesTitle">Our Values</h5>
             <p id="OurValues">
-                <img src="style\oldPeopleWIthCaravan.jpg" alt="elderlyOurValuesPage">
+                <img src="pages\style\oldPeopleWIthCaravan.jpg" alt="elderlyOurValuesPage">
 
                 Our values are to make sure we can connect seller to buyer
                 in the most streamlined fashion as possible. So that we can
@@ -45,7 +42,7 @@ include('header.php');
 
             <h5 id="OurCompanyTitle">Our Company</h5>
             <p id="OurCompany">
-                <img src="style\oldPeopleWIthCaravan.jpg" alt="elderlyOurValuesPage">
+                <img id="companyImg" src="pages\style\elderlyOurValuesPage.jpg" alt="elderlyOurValuesPage">
 
                 Our values are to make sure we can connect seller to buyer
                 in the most streamlined fashion as possible. So that we can
@@ -53,6 +50,8 @@ include('header.php');
                 For Buyer and seller alike, rentMyCaravan will do it right!
 
             </p>
+
+            
         </div>
 
     </div>
