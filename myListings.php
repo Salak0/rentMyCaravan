@@ -74,7 +74,14 @@ $result = $stmt->get_result();
                             <input type="hidden" name="caravan_id" value="<?= $row['caravan_id'] ?>">
                             <button type="submit">Remove</button>
                         </form>
+
+
+                        <form method="GET" action="editListing.php">
+                            <input type="hidden" name="caravan_id" value="<?= $row['caravan_id'] ?>">
+                            <button type="submit">Edit</button>
+                        </form>
                     </td>
+
                 </tr>
             <?php endwhile; ?>
         </table>
