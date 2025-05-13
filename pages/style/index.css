@@ -28,7 +28,16 @@ body {
     font-family: Arial;
     font-weight: bold;
     letter-spacing: 2px;
-    margin-right: auto; /* Keep logo on the left */
+    margin-right: auto;
+    /* Keep logo on the left */
+}
+
+.logo a {
+    text-decoration: none; 
+    color: inherit;        
+    font-weight: inherit;  
+    font-size: inherit;   
+
 }
 
 /* Navigation links styling */
