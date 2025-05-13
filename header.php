@@ -22,11 +22,6 @@ $loggedIn = isset($_SESSION["email_id"]);
         <h2 class="logo">RentACaravan</h2>
         <div class="nav-links">
             
-
-           
-            <a href="login.php" class="nav-link">Login</a>
-            <a href="register.php" class="nav-link">Register</a>
-            
             <a href="index.php" class="nav-link">Home</a>
             <a href="listings.php" class="nav-link">Listings</a>
             <a href="aboutUs.php" class="nav-link">About Us</a>

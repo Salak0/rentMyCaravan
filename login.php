@@ -34,24 +34,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <title>Login - RentACaravan</title>
     <link rel="stylesheet" href="pages/style/login.css">
+    <script defer src="pages/scripts/logi.js"></script>
 </head>
 <body>
     <div class="main-login">
         <div class="login-container">
-            <a href="index.php" class="returnArrow"><img src="pages/style/returnArrow.svg"></a>
+            <a href="index.php" class="returnArrow"><img src="pages\style\returnArrow.svg"></a>
             <h2>Welcome! <br>Please Sign In</h2>
-            <?php if ($loginError): ?>
-                <p style="color:red;"><?php echo $loginError; ?></p>
-            <?php endif; ?>
+            
             <form method="POST" action="">
                 <div class="inputValidation">
                     <label for="email">Email:</label>
-                    <input type="text" id="email" name="email" required>
+                    <input type="text" id="email" name="email">
                 </div>
                 <div class="inputValidation">
                     <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password" name="password">
                 </div>
+                <?php if ($loginError): ?>
+                    <p style="color:red;"><?php echo $loginError; ?></p>
+                <?php endif; ?>
                 <button type="submit" class="button">Login</button>
             </form>
             <p>Don't have an account? <a href="register.php">Register here</a></p>
