@@ -41,6 +41,8 @@ $result = $conn->query($sql);
     </style>
 </head>
 <body>
+    <br>
+    <br>
 <h1>Available Caravans</h1>
 
 <?php while ($row = $result->fetch_assoc()): ?>
