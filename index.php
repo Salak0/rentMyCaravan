@@ -5,6 +5,13 @@ include('header.php');
 <!-- Caravan Listing Section -->
      <link rel="stylesheet" href="pages/style/index.css">
 
+     <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="quote-container">
+            <p class="quote-content">"A journey of a thousand miles<br>begins with a single click"</p>
+        </div>
+    </div>
+
 <section class="caravan-list">
     <h2 id="featcar">Featured Caravans</h2>
     <div class="caravan-container">
