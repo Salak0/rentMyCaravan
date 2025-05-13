@@ -46,6 +46,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Rent Caravan</title>
 </head>
 <body>
+    <br>
+    <br>
+    <br>
+    <br>
 <h1>Select Dates for Rental</h1>
 <form method="POST">
     <label for="start_date">Start Date:</label>
