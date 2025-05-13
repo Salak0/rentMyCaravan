@@ -21,6 +21,9 @@ $loggedIn = isset($_SESSION["email_id"]);
     <header class="header">
         <h2 class="logo">RentACaravan</h2>
         <div class="nav-links">
+            
+
+           
             <a href="login.php" class="nav-link">Login</a>
             <a href="register.php" class="nav-link">Register</a>
             
@@ -31,6 +34,9 @@ $loggedIn = isset($_SESSION["email_id"]);
             <a href="addCaravan.php" class="nav-link">Add Listing</a>
             <a href="myRentals.php" class="nav-link">My Rentals</a>
             <a href="myListings.php" class="nav-link">My Listings</a> 
+            
+            
+            
             <?php endif; ?>
     </header>
         

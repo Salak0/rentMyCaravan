@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="main-login">
         <div class="login-container">
-            <a href="index.php" class="returnArrow"><img src="style/returnArrow.svg"></a>
+            <a href="index.php" class="returnArrow"><img src="pages/style/returnArrow.svg"></a>
             <h2>Welcome! <br>Please Sign In</h2>
             <?php if ($loginError): ?>
                 <p style="color:red;"><?php echo $loginError; ?></p>
