@@ -12,33 +12,67 @@ include('header.php');
         </div>
     </div>
 
-<section class="caravan-list">
-    <h2 id="featcar">Featured Caravans</h2>
-    <div class="caravan-container">
-        <!-- Caravan 1 -->
-        <div class="caravan-box">
-            <img src="caravan1.jpg" alt="Caravan 1">
-            <h3>Swift Elegance 2022</h3>
-            <p>Beds: 4 | Bathrooms: 1 | Size: 25ft</p>
-        </div>
+<!-- Main Content -->
+    <div class="content-section">
+        <section class="caravan-list">
+            <h2 class="section-title">Featured Caravans</h2>
+            <div class="caravan-container">
+                <!-- Caravan 1 -->
+                <div class="caravan-box">
+                    <img src="pages\style\caravan1.jpg" alt="Caravan 1">
+                    <h3>Swift Elegance 2022</h3>
+                    <p>Beds: 4 | Bathrooms: 1 | Size: 25ft</p>
+                </div>
 
-        <!-- Caravan 2 -->
-        <div class="caravan-box">
-            <img src="caravan2.jpg" alt="Caravan 2">
-            <h3>Bailey Phoenix 2021</h3>
-            <p>Beds: 3 | Bathrooms: 1 | Size: 22ft</p>
-        </div>
+                <!-- Caravan 2 -->
+                <div class="caravan-box">
+                    <img src="pages\style\caravan2.jpg" alt="Caravan 2">
+                    <h3>Bailey Phoenix 2021</h3>
+                    <p>Beds: 3 | Bathrooms: 1 | Size: 22ft</p>
+                </div>
 
-        <!-- Caravan 3 -->
-        <div class="caravan-box">
-            <img src="caravan3.jpeg" alt="Caravan 3">
-            <h3>Elddis Avante 2023</h3>
-            <p>Beds: 2 | Bathrooms: 1 | Size: 20ft</p>
-        </div>
+                <!-- Caravan 3 -->
+                <div class="caravan-box">
+                    <img src="pages\style\caravan3.jpeg" alt="Caravan 3">
+                    <h3>Elddis Avante 2023</h3>
+                    <p>Beds: 2 | Bathrooms: 1 | Size: 20ft</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section">
+            <h2 class="section-title">Our Mission</h2>
+            <p class="mission-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, at nulla. Repellendus nihil ad dolorum aliquid est, sed, soluta reiciendis eum eos inventore reprehenderit deleniti nam maxime explicabo! Voluptate, ratione.</p>
+        </section>
+
+        <!-- Instruction Section -->
+        <section class="how-to-rent">
+            <h2 class="section-title">How to Rent a Caravan</h2>
+            <div class="steps-container">
+                <div class="step-box">
+                    <div class="step-number">1</div>
+                    <h3>Browse Our Selection</h3>
+                    <p>Browse through our selection of caravans and find one you'd like.</p>
+                </div>
+                <div class="step-box">
+                    <div class="step-number">2</div>
+                    <h3>Book Your Caravan</h3>
+                    <p>Book the caravan by filling in some details.</p>
+                </div>
+                <div class="step-box">
+                    <div class="step-number">3</div>
+                    <h3>Pick Up</h3>
+                    <p>Pick up the caravan from the agreed location.</p>
+                </div>
+                <div class="step-box">
+                    <div class="step-number">4</div>
+                    <h3>Begin Your Adventure</h3>
+                    <p>Set off and enjoy your caravan adventure!</p>
+                </div>
+            </div>
+        </section>
     </div>
-</section>
-</body>
-</html>
 
 
 <?php include('footer.php'); ?>
