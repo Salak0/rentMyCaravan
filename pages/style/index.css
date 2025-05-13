@@ -257,3 +257,48 @@ body {
         width: 100%;
     }
 }
+
+
+/* nav buttons
+
+
+/*LOGIN BUTTON*/
+
+#logBut{
+    background: white;
+    border: none;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 20px;
+    border-radius: 4px;
+    transition: background 0.3s;
+
+    
+}
+
+#logBut:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+
+}
+
+/*REGISTER BUTTON*/
+#regBut{
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding-right: 30px;
+    border-radius: 4px;
+    transition: background 0.3s;
+
+    
+}
+
+#regBut:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+
+}

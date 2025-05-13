@@ -29,6 +29,12 @@ $result = $stmt->get_result();
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br> 
     
 
 <div class="container">
