@@ -56,7 +56,7 @@ $loggedIn = isset($_SESSION["email_id"]);
             </div>
 
         </div>
-        <br>
+        
     
     </header>
         
@@ -66,12 +66,8 @@ $loggedIn = isset($_SESSION["email_id"]);
 
 
         <!-- Login/Register or Logout -->
-        <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br> 
+       
+    
     
 </div>
 
