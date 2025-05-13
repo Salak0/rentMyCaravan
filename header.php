@@ -49,7 +49,7 @@ $loggedIn = isset($_SESSION["email_id"]);
                     <button type="button" id="logBut" onclick="location.href='login.php'">
                         <span class="material-symbols-outlined">login</span>Login
                     </button>
-                    <button type="button"  onclick="location.href='register.php'">Register</button>
+                    <button type="button" id="regBut" onclick="location.href='register.php'">Register</button>
                 <?php endif; ?>
             </div>
 
