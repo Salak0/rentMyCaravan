@@ -29,6 +29,7 @@ $result = $stmt->get_result();
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    
 
 <div class="container">
     <h2>My Caravan Listings</h2>

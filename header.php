@@ -30,34 +30,49 @@ $loggedIn = isset($_SESSION["email_id"]);
             <a href="index.php" class="nav-link">Home</a>
             <a href="listings.php" class="nav-link">Listings</a>
             <a href="aboutUs.php" class="nav-link">About Us</a>
-            <?php if ($loggedIn): ?>
-            <a href="addCaravan.php" class="nav-link">Add Listing</a>
-            <a href="myRentals.php" class="nav-link">My Rentals</a>
-            <a href="myListings.php" class="nav-link">My Listings</a> 
+            <?php if ($loggedIn):?>
             
-            
+                
+                
+                <a href="addCaravan.php" class="nav-link">Add Listing</a>
+                <a href="myRentals.php" class="nav-link">My Rentals</a>
+                <a href="myListings.php" class="nav-link">My Listings</a> 
+            <?php else: ?>
+                <a href="login.php" class="nav-link">Login</a>
+                <a href="register.php" class="nav-link">Register</a>
             
             <?php endif; ?>
+
+            <div class="nav-link">
+                <?php if ($loggedIn): ?>
+                    <span class="welcome-msg">Welcome, <?= htmlspecialchars($_SESSION["email_id"]); ?></span>
+                    <a href="logout.php"><button type="button">Logout</button></a>
+                <?php else: ?>
+                    <button type="button" class="login" onclick="location.href='login.php'">
+                        <span class="material-symbols-outlined">login</span>Login
+                    </button>
+                    <button type="button" class="register" onclick="location.href='register.php'">Register</button>
+                <?php endif; ?>
+            </div>
+
+        </div>
+        <br>
+    
     </header>
         
         
         
-        </div>
+        
 
 
         <!-- Login/Register or Logout -->
-        <div class="buttons">
-            <?php if ($loggedIn): ?>
-                <span class="welcome-msg">Welcome, <?= htmlspecialchars($_SESSION["email_id"]); ?></span>
-                <a href="logout.php"><button type="button">Logout</button></a>
-            <?php else: ?>
-                <button type="button" class="login" onclick="location.href='login.php'">
-                    <span class="material-symbols-outlined">login</span>Login
-                </button>
-                <button type="button" class="register" onclick="location.href='register.php'">Register</button>
-            <?php endif; ?>
-        </div>
-    </nav>
+        <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br> 
+    
 </div>
 
 <!-- Optional styling -->
