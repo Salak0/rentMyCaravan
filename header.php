@@ -30,21 +30,23 @@ $loggedIn = isset($_SESSION["email_id"]);
                 <a href="addCaravan.php" class="nav-link">Add Listing</a>
                 <a href="myRentals.php" class="nav-link">My Rentals</a>
                 <a href="myListings.php" class="nav-link">My Listings</a> 
-            <?php else: ?>
-                <a href="login.php" class="nav-link">Login</a>
-                <a href="register.php" class="nav-link">Register</a>
+        
             
             <?php endif; ?>
 
-            <div class="nav-button">
+            
                 <?php if ($loggedIn): ?>
                     <span class="welcome-msg">Welcome, <?= htmlspecialchars($_SESSION["email_id"]); ?></span>
-                    <a href="logout.php"><button type="button">Logout</button></a>
+                    <div class="nav-button">
+                        <button type="button" onclick="location.href='logout.php'">Log Out</button>
+                    </div>
                 <?php else: ?>
-                    <button type="button" id="logBut" onclick="location.href='login.php'">
-                        <span class="material-symbols-outlined">login</span>Login
-                    </button>
-                    <button type="button" id="regBut" onclick="location.href='register.php'">Register</button>
+                    <div class="nav-button">
+                        <button type="button" onclick="location.href='login.php'">Login</button>
+                    </div>
+                    <div class="nav-button">
+                        <button type="button" onclick="location.href='register.php'">Register</button>
+                    </div>
                 <?php endif; ?>
             </div>
 
@@ -62,20 +64,4 @@ $loggedIn = isset($_SESSION["email_id"]);
        
     
     
-</div>
 
-<!-- Optional styling -->
-<style>
-    .nav-button.add-listing {
-        background-color: #4CAF50;
-        color: white;
-        padding: 8px 14px;
-        border-radius: 4px;
-        text-decoration: none;
-        margin-left: 10px;
-    }
-
-    .nav-button.add-listing:hover {
-        background-color: #45a049;
-    }
-</style>
