@@ -54,7 +54,7 @@ $result = $conn->query($sql);
        <h2><?= htmlspecialchars($row['make'] . ' ' . $row['model']) ?></h2>
             <img src="<?= htmlspecialchars($row['image_url']) ?>" alt="Caravan Image">
             <p><strong>Mileage:</strong> <?= $row['mileage'] ?></p>
-            <p><strong>Transmission Type:</strong> <?= $row['trans_type'] ?></p>
+            <p><strong>Transmission Type:</strong><?= $row['trans_type'] ?></p>
             <p><strong>Price/day:</strong> £<?= $row['price_per_day'] ?></p>
         </div>
     </a>
