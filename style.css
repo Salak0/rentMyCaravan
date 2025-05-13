@@ -31,7 +31,7 @@ body {
     display: flex;
     gap: 15px;
 }
-
+/*nav button*/
 .nav-button {
     background: none;
     border: none;
