@@ -30,6 +30,11 @@ $result = $stmt->get_result();
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    
+<br>
+    <br>
+    <br>
+    <br>
 <h1>My Rented Caravans</h1>
 
 <?php if ($result->num_rows > 0): ?>

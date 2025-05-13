@@ -67,6 +67,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <title>Edit Listing</title>
 </head>
 <body>
+    
+    <br>
+    <br>
+    <br>
+    <br>
     <h2>Edit Caravan Listing</h2>
     <form method="POST" enctype="multipart/form-data">
         <label>Make:</label><br>

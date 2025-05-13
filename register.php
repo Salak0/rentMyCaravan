@@ -34,6 +34,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script defer src="scripts/reg.js"></script>
 </head>
 <body>
+    
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="main-reg">
         <div class="form-container">
             <form id="registration-form" action="register.php" method="POST">
