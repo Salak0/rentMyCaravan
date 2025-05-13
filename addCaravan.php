@@ -78,7 +78,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <script defer src="pages\scripts\addCaravan.js"></script>
 </head>
 <body>
-
+<br>
+<br>
 <form class="form" method="POST" action="addCaravan.php" enctype="multipart/form-data">
   <div class="header">
     <h2>Create a caravan listing</h2>
