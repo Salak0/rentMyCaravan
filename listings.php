@@ -14,25 +14,45 @@ $result = $conn->query($sql);
 <head>
     <title>Caravan Listings</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .listing-link {
+            text-decoration: none;
+            color: inherit;
+        }
+        .listing {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 15px;
+            width: 320px;
+            display: inline-block;
+            vertical-align: top;
+            background-color: #fdfdfd;
+            transition: box-shadow 0.3s;
+        }
+        .listing:hover {
+            box-shadow: 0 0 10px #ccc;
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+        .listing img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
 <h1>Available Caravans</h1>
 
 <?php while ($row = $result->fetch_assoc()): ?>
-    <div class="listing">
-        <h2><?= htmlspecialchars($row['name']) ?></h2>
-        <img src="<?= htmlspecialchars($row['image_url']) ?>" width="300">
-        <p><?= htmlspecialchars($row['description']) ?></p>
-        <p><strong>Mileage:</strong> <?= $row['mileage'] ?></p>
-        <p><strong>Transmission Type:</strong> <?= $row['trans_type'] ?></p>
-        <p><strong>Caravan Type:</strong> <?= $row['caravan_type'] ?></p>
-        <p><strong>Price/day:</strong> £<?= $row['price_per_day'] ?></p>
-        <?php if ($loggedIn): ?>
-            <a href="rentCaravan.php?id=<?= $row['caravan_id'] ?>"><button>Rent this caravan</button></a>
-        <?php else: ?>
-            <p><a href="login.php">Login</a> to rent this caravan</p>
-        <?php endif; ?>
-    </div>
+    <a href="viewListing.php?id=<?= $row['caravan_id'] ?>" class="listing-link">
+        <div class="listing">
+       <h2><?= htmlspecialchars($row['make'] . ' ' . $row['model']) ?></h2>
+            <img src="<?= htmlspecialchars($row['image_url']) ?>" alt="Caravan Image">
+            <p><strong>Mileage:</strong> <?= $row['mileage'] ?></p>
+            <p><strong>Transmission Type:</strong> <?= $row['trans_type'] ?></p>
+            <p><strong>Price/day:</strong> £<?= $row['price_per_day'] ?></p>
+        </div>
+    </a>
 <?php endwhile; ?>
 </body>
 </html>
