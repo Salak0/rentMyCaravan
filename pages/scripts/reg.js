@@ -1,12 +1,9 @@
 const form = document.getElementById("registration-form")
 const firstName = document.getElementById("firstName")
 const lastName = document.getElementById("lastName")
-const dob = document.getElementById("dateOfBirth")
-const phoneNum = document.getElementById("phoneNumber")
 const email = document.getElementById("email")
 const postcode = document.getElementById("postcode")
 const address = document.getElementById("address")
-const city = document.getElementById("city")
 const password = document.getElementById("password")
 const repeatPassword = document.getElementById("repeatPassword")
 const termsCheckbox = document.getElementById("termsConditions")
@@ -41,23 +38,13 @@ const isValidEmail = email => {
     return re.test(String(email).toLowerCase());
 }
 
-const isOver18 = (dateStr) => {
-    const today = new Date();
-    const dob = new Date(dateStr);
-    const age = today.getFullYear() - dob.getFullYear();
-    const m = today.getMonth() - dob.getMonth();
-    return (age > 18 || (age === 18 && m >= 0 && today.getDate() >= dob.getDate()));
-}
 
 const validateInput = () => {
     const firstNameValue = firstName.value.trim();
     const lastNameValue = lastName.value.trim();
-    const dobValue = dob.value.trim();
-    const phoneNumValue = phoneNum.value.trim();
     const emailValue = email.value.trim();
     const postcodeValue = postcode.value.trim();
     const addressValue = address.value.trim();
-    const cityValue = city.value.trim();
     const passwordValue = password.value.trim();
     const repeatPasswordValue = repeatPassword.value.trim();
     const termsCheckboxTicked = termsCheckbox.checked;
@@ -78,25 +65,6 @@ const validateInput = () => {
         setSuccess(lastName);
     }
 
-    if (dobValue === "") {
-        setError(dob, "Enter a valid date of birth");
-        valid = false;
-    } else if (!isOver18(dobValue)) {
-        setError(dob, "You must be at least 18 years old to sign up");
-        valid = false;
-    } else {
-        setSuccess(dob);
-    }
-
-    if (phoneNumValue === "") {
-        setError(phoneNum, "Phone number required");
-        valid = false;
-    } else if (!/^\d{11}$/.test(phoneNumValue)) {
-        setError(phoneNum, "Phone number must be exactly 11 digits");
-        valid = false;
-    } else {
-        setSuccess(phoneNum);
-    }
 
     if(emailValue === ""){
         setError(email, "Email is required");
@@ -125,12 +93,6 @@ const validateInput = () => {
         setSuccess(address);
     }
 
-    if (cityValue === "") {
-        setError(city, "City required");
-        valid = false;
-    } else {
-        setSuccess(city);
-    }
 
     if (passwordValue === "") {
         setError(password, "Password required");
