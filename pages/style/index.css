@@ -20,6 +20,7 @@ body {
     position: fixed;
     top: 0;
     z-index: 1000;
+    margin-left: 0px;
 }
 
 .logo {
@@ -281,6 +282,11 @@ body {
     vertical-align: middle;
     margin-right: 6px;
     font-size: 30px;
+}
+
+.main{
+    margin-left: -60px;
+    padding-left: 40px;
 }
 
 
