@@ -75,30 +75,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <link rel="stylesheet" href="pages\style\add-caravan.css">
 <script defer src="pages\scripts\addCaravan.js"></script>
 <body>
-  <br>
-  <br>
-  <br>
-  <br>
-  <form class="form" method="POST" action="addCaravan.php" enctype="multipart/form-data">
-    
-      <h2>Create a caravan listing</h2>
-      <br>
-      <p>Enter caravan information that will appear on the listing.</p>
-    
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<form class="form" method="POST" action="addCaravan.php" enctype="multipart/form-data">
+  
+    <h2>Create a caravan listing</h2>
+    <p>Enter caravan information that will appear on the listing.</p>
+  
 
-    <div class="body">
-      <div class="pagination">
-        <div class="number">1</div>
-        <div class="bar"></div>
-        <div class="number">2</div>
-        <div class="bar"></div>
-        <div class="number">3</div>
-        <div class="bar"></div>
-        <div class="number">4</div>
-        <div class="bar"></div>
-        <div class="number">5</div>
-      </div>
+  <div class="body">
+    <div class="pagination">
+      <div class="number">1</div>
+      <div class="bar"></div>
+      <div class="number">2</div>
+      <div class="bar"></div>
+      <div class="number">3</div>
+      <div class="bar"></div>
+      <div class="number">4</div>
+      <div class="bar"></div>
+      <div class="number">5</div>
     </div>
+  </div>
+
 
     <div class="steps">
       <!-- Step 1 -->
