@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="main-reg">
         <div class="form-container">
             <form id="registration-form" action="register.php" method="POST">
-                <a href="index.php" class="returnArrow"><img src="style/returnArrow.svg" alt="Return"></a>
+                <a href="index.php" class="returnArrow"><img src="pages/style/returnArrow.svg" alt="Return"></a>
                 <h2>Welcome! <br>Please Sign In</h2>
 
                 <div class="form-row">

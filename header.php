@@ -45,7 +45,7 @@ $loggedIn = isset($_SESSION["email_id"]);
                         <button type="button" onclick="location.href='login.php'">Login</button>
                     </div>
                     <div class="nav-button">
-                        <button type="button" onclick="location.href='register.php'">Register</button>
+                        <button type="button" onclick="location.href='register.php'" id="registerButton">Register</button>
                     </div>
                 <?php endif; ?>
             </div>
