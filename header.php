@@ -36,7 +36,9 @@ $loggedIn = isset($_SESSION["email_id"]);
 
             
                 <?php if ($loggedIn): ?>
-                    <span class="welcome-msg">Welcome, <?= htmlspecialchars($_SESSION["email_id"]); ?></span>
+                   <span class="welcome-msg" style="color:rgb(208, 221, 243); font-style: italic; font-weight: 400; margin-left: 20px;">
+                         Welcome,<br> <?= htmlspecialchars($_SESSION["email_id"]); ?>
+                    </span>
                     <div class="nav-button">
                         <button type="button" onclick="location.href='logout.php'">Log Out</button>
                     </div>
