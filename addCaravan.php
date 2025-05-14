@@ -79,10 +79,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <br>
 <br>
 <form class="form" method="POST" action="addCaravan.php" enctype="multipart/form-data">
-  <div class="header">
+  
     <h2>Create a caravan listing</h2>
     <p>Enter caravan information that will appear on the listing.</p>
-  </div>
+  
 
   <div class="body">
     <div class="pagination">
