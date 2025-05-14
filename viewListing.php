@@ -31,19 +31,22 @@ $caravan = $result->fetch_assoc();
 <html>
 <head>
     <title><?= htmlspecialchars($caravan['make'] . ' ' . $caravan['model']) ?> - Details</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages\style\viewListing.css">
 </head>
 <body>
     <div class="container">
         <h2><?= htmlspecialchars($caravan['make'] . ' ' . $caravan['model']) ?></h2>
-        <img src="<?= htmlspecialchars($caravan['image_url']) ?>" alt="Caravan Image" style="max-width:500px;">
-        <p><strong>Description:</strong> <?= nl2br(htmlspecialchars($caravan['description'])) ?></p>
-        <p><strong>Mileage:</strong> <?= htmlspecialchars($caravan['mileage']) ?></p>
-        <p><strong>Transmission:</strong> <?= htmlspecialchars($caravan['trans_type']) ?></p>
-        <p><strong>Caravan Type:</strong> <?= htmlspecialchars($caravan['caravan_type']) ?></p>
-        <p><strong>Beds:</strong> <?= htmlspecialchars($caravan['sleeps']) ?></p>
-        <p><strong>Location:</strong> <?= htmlspecialchars($caravan['caravan_address']) ?></p>
-        <p><strong>Price per day:</strong> £<?= htmlspecialchars($caravan['price_per_day']) ?></p>
+        <img src="<?= htmlspecialchars($caravan['image_url']) ?>" alt="Caravan Image" >
+        <div class="DispText">
+            <p><strong>Description:</strong> <?= nl2br(htmlspecialchars($caravan['description'])) ?></p>
+            <p><strong>Mileage:</strong> <?= htmlspecialchars($caravan['mileage']) ?></p>
+            <p><strong>Transmission:</strong> <?= htmlspecialchars($caravan['trans_type']) ?></p>
+            <p><strong>Caravan Type:</strong> <?= htmlspecialchars($caravan['caravan_type']) ?></p>
+            <p><strong>Beds:</strong> <?= htmlspecialchars($caravan['sleeps']) ?></p>
+            <p><strong>Location:</strong> <?= htmlspecialchars($caravan['caravan_address']) ?></p>
+            <p><strong>Price per day:</strong> £<?= htmlspecialchars($caravan['price_per_day']) ?></p>
+        </div>
+        
 
         <?php if (isset($_SESSION['email_id'])): ?>
             <a href="rentCaravan.php?id=<?= $caravan['caravan_id'] ?>"><button>Rent this caravan</button></a>
