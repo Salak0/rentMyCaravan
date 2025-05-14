@@ -34,9 +34,16 @@ $caravan = $result->fetch_assoc();
     <link rel="stylesheet" href="pages\style\viewListing.css">
 </head>
 <body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+<h2><?= htmlspecialchars($caravan['make'] . ' ' . $caravan['model']) ?></h2>
     <div class="container">
-        <h2><?= htmlspecialchars($caravan['make'] . ' ' . $caravan['model']) ?></h2>
-        <img src="<?= htmlspecialchars($caravan['image_url']) ?>" alt="Caravan Image" >
+        
+        <img id="displayImg" src="<?= htmlspecialchars($caravan['image_url']) ?>" alt="Caravan Image" >
         <div class="DispText">
             <p><strong>Description:</strong> <?= nl2br(htmlspecialchars($caravan['description'])) ?></p>
             <p><strong>Mileage:</strong> <?= htmlspecialchars($caravan['mileage']) ?></p>

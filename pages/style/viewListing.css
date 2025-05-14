@@ -1,7 +1,23 @@
-img{
-    align: left;
-    width: 200;
+img {
+    width: 200px;
+    height: auto;
+    display: block;
 }
-.DisText{
-    
+
+#displayImg {
+    float: left;
+    margin-right: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden; 
+    font-family: Arial;
+    align-items: center;
+    display: flex;
+}
+
+.DispText {
 }
