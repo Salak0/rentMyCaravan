@@ -35,6 +35,8 @@ $result = $stmt->get_result();
     <br>
     <br>
     <br>
+    <br>
+     
 <h1>My Rented Caravans</h1>
 
 <?php if ($result->num_rows > 0): ?>
