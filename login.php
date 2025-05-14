@@ -41,14 +41,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="login-container">
             <a href="index.php" class="returnArrow"><img src="pages\style\returnArrow.svg"></a>
             <h2>Welcome! <br>Please Sign In</h2>
-            <form method="POST" action="">
+            <form id="login-form" method="POST" action="">
                 <div class="inputValidation">
                     <label for="email">Email:</label>
                     <input type="text" id="email" name="email">
+                    <div class="error"></div>
                 </div>
                 <div class="inputValidation">
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password">
+                    <div class="error"></div>
                 </div>
                 <?php if ($loginError): ?>
                 <p style="color:red;"><?php echo $loginError; ?></p>
