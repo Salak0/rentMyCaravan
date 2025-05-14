@@ -20,7 +20,8 @@ body {
     position: fixed;
     top: 0;
     z-index: 1000;
-    margin-left: 0px;
+    
+    margin-right: 30px;
 }
 
 .logo {
@@ -287,6 +288,7 @@ body {
 .main{
     margin-left: -60px;
     padding-left: 60px;
+    
 }
 
 

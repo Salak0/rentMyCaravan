@@ -36,6 +36,7 @@ $result = $stmt->get_result();
     <br>
     <br> 
     
+    
 
 <div class="container">
     <h2>My Caravan Listings</h2>

@@ -38,6 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <br>
     <br>
     <br>
+    
     <div class="main-reg">
         <div class="form-container">
             <form id="registration-form" action="register.php" method="POST">
