@@ -102,43 +102,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </div>
 
-  <div class="steps">
-    <!-- Step 1 -->
-    <div class="step active">
-      <h4>Caravan Registration</h4>
-      <p>Enter the registration of your caravan</p>
-      <div class="grid">
-        <div class="col">
-          <label for="reg">Registration Number</label>
-          <input type="text" id="reg" name="reg" required>
-        </div>
-      </div>
-      <div class="navigation">
-        <button type="button" class="next">Next</button>
-      </div>
-    </div>
-
-    <!-- Step 2 -->
-    <div class="step">
-      <h4>Caravan Details</h4>
-      <p>What is the bodytype of the caravan?</p>
-      <br>
-      <p>Enter caravan information that will appear on the listing.</p>
-    
-
-    <div class="body">
-      <div class="pagination">
-        <div class="number">1</div>
-        <div class="bar"></div>
-        <div class="number">2</div>
-        <div class="bar"></div>
-        <div class="number">3</div>
-        <div class="bar"></div>
-        <div class="number">4</div>
-        <div class="bar"></div>
-        <div class="number">5</div>
-      </div>
-    </div>
 
     <div class="steps">
       <!-- Step 1 -->
