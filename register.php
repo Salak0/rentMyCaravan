@@ -30,11 +30,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <link rel="stylesheet" href="pages\style\reg.css">
+    <link rel="stylesheet" href="pages/style/reg.css">
     <script defer src="scripts/reg.js"></script>
 </head>
 <body>
-    
     <br>
     <br>
     <br>
@@ -43,8 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="form-container">
             <form id="registration-form" action="register.php" method="POST">
                 <a href="index.php" class="returnArrow"><img src="pages/style/returnArrow.svg" alt="Return"></a>
-                <h2>Welcome! <br>Please Sign In</h2>
-
+                <h2>Welcome!<br>Please Sign In</h2>
+                <br>
+                <br>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="firstName">First Name:</label>
@@ -74,11 +74,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
 
                 <div class="form-row">
-                    <div class="form-group">
+                    <div class="form-group full-width">
                         <label for="address">Address:</label>
                         <input type="text" id="address" name="address" required>
                         <div class="error"></div>
                     </div>
+                </div>
 
                 <div class="form-row">
                     <div class="form-group">
@@ -95,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
 
                 <div class="form-row">
-                    <div class="form-group">
+                    <div class="form-group full-width">
                         <div class="checkbox-group">
                             <input type="checkbox" id="termsConditions" name="termsConditions" required>
                             <label for="termsConditions" style="display: inline; font-weight: normal;">
@@ -103,6 +104,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </label>
                         </div>
                     </div>
+                </div>
+                
+                <div class="form-row">
                     <div class="form-group full-width">
                         <button type="submit" class="btn-register">Register</button>
                     </div>
