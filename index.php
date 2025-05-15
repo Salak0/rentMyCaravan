@@ -1,78 +1,47 @@
 <?php
 include('header.php');
+require 'db.php'; // Make sure this connects to your MySQL database
+
+// Fetch 3 random caravans
+$sql = "SELECT caravan_id, make, model, sleeps, image_url FROM caravans ORDER BY RAND() LIMIT 3";
+$result = $conn->query($sql);
 ?>
 
-<!-- Caravan Listing Section -->
-     <link rel="stylesheet" href="pages/style/index.css">
+<link rel="stylesheet" href="pages/style/index.css">
 
-     <!-- Hero Section -->
-    <div class="hero-section">
-        <div class="quote-container">
-            <p class="quote-content">"A journey of a thousand miles<br>begins with a single click"</p>
-        </div>
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="quote-container">
+        <p class="quote-content">"A journey of a thousand miles<br>begins with a single click"</p>
     </div>
+</div>
 
 <!-- Main Content -->
-    <div class="content-section">
-        <section class="caravan-list">
-            <h2 class="section-title">Featured Caravans</h2>
-            <div class="caravan-container">
-                <!-- Caravan 1 -->
+<div class="content-section">
+    <section class="caravan-list">
+        <h2 class="section-title">Featured Caravans</h2>
+        <div class="caravan-container">
+            <?php while ($row = $result->fetch_assoc()): ?>
                 <div class="caravan-box">
-                    <img src="pages\style\caravan1.jpg" alt="Caravan 1">
-                    <h3>Swift Elegance 2022</h3>
-                    <p>Beds: 4 | Bathrooms: 1 | Size: 25ft</p>
+                    <a href="viewListing.php?id=<?= $row['caravan_id'] ?>">
+                        <img src="<?= htmlspecialchars($row['image_url']) ?>" alt="<?= htmlspecialchars($row['make'] . ' ' . $row['model']) ?>">
+                        <h3><?= htmlspecialchars($row['make'] . ' ' . $row['model']) ?></h3>
+                        <p>Sleeps: <?= htmlspecialchars($row['sleeps']) ?></p>
+                    </a>
                 </div>
+            <?php endwhile; ?>
+        </div>
+    </section>
 
-                <!-- Caravan 2 -->
-                <div class="caravan-box">
-                    <img src="pages\style\caravan2.jpg" alt="Caravan 2">
-                    <h3>Bailey Phoenix 2021</h3>
-                    <p>Beds: 3 | Bathrooms: 1 | Size: 22ft</p>
-                </div>
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <h2 class="section-title">Our Mission</h2>
+        <p class="mission-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+    </section>
 
-                <!-- Caravan 3 -->
-                <div class="caravan-box">
-                    <img src="pages\style\caravan3.jpeg" alt="Caravan 3">
-                    <h3>Elddis Avante 2023</h3>
-                    <p>Beds: 2 | Bathrooms: 1 | Size: 20ft</p>
-                </div>
-            </div>
-        </section>
+    <!-- How to Rent Section -->
+    <!-- (Keep your existing step boxes here) -->
 
-        <!-- Mission Section -->
-        <section class="mission-section">
-            <h2 class="section-title">Our Mission</h2>
-            <p class="mission-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, at nulla. Repellendus nihil ad dolorum aliquid est, sed, soluta reiciendis eum eos inventore reprehenderit deleniti nam maxime explicabo! Voluptate, ratione.</p>
-        </section>
-
-        <!-- Instruction Section -->
-        <section class="how-to-rent">
-            <h2 class="section-title">How to Rent a Caravan</h2>
-            <div class="steps-container">
-                <div class="step-box">
-                    <div class="step-number">1</div>
-                    <h3>Browse Our Selection</h3>
-                    <p>Browse through our selection of caravans and find one you'd like.</p>
-                </div>
-                <div class="step-box">
-                    <div class="step-number">2</div>
-                    <h3>Book Your Caravan</h3>
-                    <p>Book the caravan by filling in some details.</p>
-                </div>
-                <div class="step-box">
-                    <div class="step-number">3</div>
-                    <h3>Pick Up</h3>
-                    <p>Pick up the caravan from the agreed location.</p>
-                </div>
-                <div class="step-box">
-                    <div class="step-number">4</div>
-                    <h3>Begin Your Adventure</h3>
-                    <p>Set off and enjoy your caravan adventure!</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
+</div>
 
 <?php include('footer.php'); ?>
