@@ -3,43 +3,47 @@ require 'db.php';
 include('header.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    session_start();
+    
     if (!isset($_SESSION["email_id"])) {
         die("User not logged in.");
     }
 
-    $email_id = $_SESSION["email_id"]; // Logged-in user's email
+    $email_id = $_SESSION["email_id"];
 
-    // Prepare and sanitize inputs
+    // Sanitize inputs
     $make = $_POST['make'] ?? '';
     $model = $_POST['model'] ?? '';
-    $reg = $_POST['reg'] ?? '';
+    $reg = $_POST['reg'] ?? ''; // Reg now taken correctly from input
     $name = $make . " " . $model . " (" . $reg . ")";
     $description = $_POST['description'] ?? '';
-    $price_per_day = $_POST['price_per_day'] ?? 0;
+    $price_per_day = floatval($_POST['price_per_day'] ?? 0);
     $caravan_address = $_POST['caravan_address'] ?? '';
     $caravan_postcode = $_POST['caravan_postcode'] ?? '';
-    $mileage = $_POST['mileage'] ?? 0;
+    $mileage = intval($_POST['mileage'] ?? 0);
     $trans_type = $_POST['trans_type'] ?? '';
     $caravan_type = $_POST['caravan_type'] ?? '';
 
     // Handle image upload
     $image_url = '';
-    if (isset($_FILES['caravanImage']) && $_FILES['caravanImage']['error'] === 0) {
+    if (isset($_FILES['caravanImage']) && $_FILES['caravanImage']['error'] === UPLOAD_ERR_OK) {
         $uploadDir = "uploads/";
         $fileName = uniqid() . "_" . basename($_FILES["caravanImage"]["name"]);
         $targetPath = $uploadDir . $fileName;
+
         if (!is_dir($uploadDir)) {
             mkdir($uploadDir, 0777, true);
         }
+
         if (move_uploaded_file($_FILES["caravanImage"]["tmp_name"], $targetPath)) {
             $image_url = $targetPath;
         }
     }
 
-    // SQL insert including email_id
+    // SQL insert
     $query = "INSERT INTO caravans 
-    (name, description, price_per_day, image_url, caravan_address, caravan_postcode, mileage, make, model, trans_type, caravan_type, email_id) 
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        (name, description, price_per_day, image_url, caravan_address, caravan_postcode, mileage, make, model, trans_type, caravan_type, email_id) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     $stmt = $conn->prepare($query);
     if (!$stmt) {
@@ -63,6 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 ?>
+
 
 
 
@@ -113,7 +118,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="grid">
           <div class="col">
             <label for="reg">Registration Number</label>
-            <input type="text" id="reg" name="name" required>
+            <input type="text" id="reg" name="reg" required>
           </div>
         </div>
         <div class="navigation">
