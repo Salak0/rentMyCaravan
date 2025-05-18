@@ -42,13 +42,13 @@ $caravan = $result->fetch_assoc();
     <br>
     <div class="TitleSection">
         <h2 class="LPageTitle"><?= htmlspecialchars($caravan['make'] . ' ' . $caravan['model']) ?></h2>
-        <a href="listings.php"><button id="returnButton" >Back</button></a>
+        <a href="listings.php"><button id="returnButton" >Back</button></a> <!--button that takes you to listings page-->
     </div>
-        <div class="container">
+        <div class="container"> <!--class for image and text-->
             
-            <img id="displayImg" src="<?= htmlspecialchars($caravan['image_url']) ?>" alt="Caravan Image" >
+            <img id="displayImg" src="<?= htmlspecialchars($caravan['image_url']) ?>" alt="Caravan Image" > <!--image tag, displays image from database-->
             <div class="DispText">
-                <p><strong>Description:</strong> <?= nl2br(htmlspecialchars($caravan['description'])) ?></p>
+                <p><strong>Description:</strong> <?= nl2br(htmlspecialchars($caravan['description'])) ?></p> <!--the attributes of the caravan taken from Database-->
                 <p><strong>Mileage:</strong> <?= htmlspecialchars($caravan['mileage']) ?></p>
                 <p><strong>Transmission:</strong> <?= htmlspecialchars($caravan['trans_type']) ?></p>
                 <p><strong>Caravan Type:</strong> <?= htmlspecialchars($caravan['caravan_type']) ?></p>
@@ -58,8 +58,8 @@ $caravan = $result->fetch_assoc();
             </div>
         </div>
         <div class="buttonC">
-            <?php if (isset($_SESSION['email_id'])): ?>
-                <a  href="rentCaravan.php?id=<?= $caravan['caravan_id'] ?>"><button id = "RentButton">Rent this caravan</button></a>
+            <?php if (isset($_SESSION['email_id'])): ?> <!--the user has to be logged in to rent a caravan-->
+                <a  href="rentCaravan.php?id=<?= $caravan['caravan_id'] ?>"><button id = "RentButton">Rent this caravan</button></a> <!--rent button-->
             <?php else: ?>
                 <p><a href="login.php">Login</a> to rent this caravan</p>
             <?php endif; ?>
