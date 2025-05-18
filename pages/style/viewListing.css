@@ -1,14 +1,17 @@
+
+
+/*setting the seize of the image*/
 img {
-    width: 200px;
+    width: 300px;
     height: auto;
     display: block;
 }
-
+/*positioning the image*/
 #displayImg {
     float: left;
     margin-right: 20px;
 }
-
+/*the container class around the image and text*/
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -16,8 +19,53 @@ img {
     overflow: hidden; 
     font-family: Arial;
     align-items: center;
-    display: flex;
+    display: flex;   /*making the items display inline*/
+    justify-content: center; /*centering the items*/
+    gap: 5px; /*the gap between components*/
+
 }
 
 .DispText {
+    padding: 10px; /*adding padding between the text*/
+}
+
+/*the rent button: changing colour, siza and font, making it curved*/
+#RentButton{ 
+    padding: 20px;
+    background-color: #2c6add;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    
+}
+
+.buttonC{/*positioning the button and moving it to the correct position*/
+    float: right;
+    padding: 20px;
+    padding-right: 90px;
+}
+
+.LPageTitle{
+    padding-Left: 40px;
+    padding-right: 550px;
+}
+/*the page title and return button*/
+.TitleSection{
+    overflow: hidden; 
+    font-family: Arial;  /*chagning font*/
+    align-items: center;
+    display: flex; /*displaying inline*/
+    justify-content: center; /*centering the content*/
+}
+
+/*the return button*/
+#returnButton{ /*adding padding, colour, curvature, and width*/
+    padding: 10px;
+    background-color: #2c6add;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    padding-left: 40px;
+    padding-right: 40px;
+
 }

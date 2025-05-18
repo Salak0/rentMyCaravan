@@ -1,0 +1,31 @@
+
+/*aligning the ekements in the outer container*/
+.pageContainer{
+    display: flex;
+    justify-content: center;
+    
+}
+
+/*aligning the elements in the inner container*/
+.rentContainer{
+    
+    margin-top: 250px; /*stops clashes with header*/
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    width: 400px;
+
+}
+
+/*button; curvature, colour, font-colour and colour of the button*/
+#confirmButton{
+    padding: 5px;
+    background-color: #2c6add;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+

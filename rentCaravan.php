@@ -63,18 +63,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Rent Caravan</title>
+    <link rel="stylesheet" href="pages\style\rentCaravan.css"> <!--linking the stylesheet-->
+
 </head>
 <body>
-    <br><br><br><br>
-    <h1>Select Dates for Rental</h1>
-    <form method="POST">
-        <label for="start_date">Start Date:</label>
-        <input type="date" name="start_date" required><br><br>
+<div class="pageContainer">    <!--the outer container-->
+    <div class="rentContainer"> <!--the inner container-->
 
-        <label for="end_date">Return Date:</label>
-        <input type="date" name="end_date" required><br><br>
+        <h1>Select Dates for Rental</h1> <!--the title-->
+        <form method="POST"> <!--the form -->
+            <label for="start_date">Start Date:</label> <!--two date fields-->
+            <input type="date" name="start_date" required><br><br>
 
-        <button type="submit">Confirm Rental</button>
-    </form>
+            <label for="end_date">Return Date:</label>
+            <input type="date" name="end_date" required><br><br>
+
+            <button type="submit" id="confirmButton">Confirm Rental</button> <!--the submit button-->
+        </form>
+    </div>
+</div>
 </body>
 </html>
