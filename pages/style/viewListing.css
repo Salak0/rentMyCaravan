@@ -1,5 +1,5 @@
 img {
-    width: 200px;
+    width: 300px;
     height: auto;
     display: block;
 }
@@ -17,7 +17,50 @@ img {
     font-family: Arial;
     align-items: center;
     display: flex;
+    justify-content: center;
+    gap: 5px;
+
 }
 
 .DispText {
+    padding: 10px;
+}
+
+#RentButton{
+    padding: 20px;
+    background-color: #2c6add;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    
+}
+
+.buttonC{
+    float: right;
+    padding: 20px;
+    padding-right: 90px;
+}
+
+.LPageTitle{
+    padding-Left: 40px;
+    padding-right: 550px;
+}
+
+.TitleSection{
+    overflow: hidden; 
+    font-family: Arial;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#returnButton{
+    padding: 10px;
+    background-color: #2c6add;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    padding-left: 40px;
+    padding-right: 40px;
+
 }
