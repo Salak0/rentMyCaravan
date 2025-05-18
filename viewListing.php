@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 require 'db.php';
-include('header.php');
+include('header.php'); //including the header.php
 
 if (!isset($_GET['id'])) {
     echo "<p>Invalid listing.</p>";
@@ -30,11 +30,11 @@ $caravan = $result->fetch_assoc();
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?= htmlspecialchars($caravan['make'] . ' ' . $caravan['model']) ?> - Details</title>
-    <link rel="stylesheet" href="pages\style\viewListing.css">
+    <title><?= htmlspecialchars($caravan['make'] . ' ' . $caravan['model']) ?> - Details</title> <!-- -->
+    <link rel="stylesheet" href="pages\style\viewListing.css"> <!--linking the stylesheet-->
 </head>
 <body>
-    <br>
+    <br> <!-- break tags for spacing-->
     <br>
     <br>
     <br>
