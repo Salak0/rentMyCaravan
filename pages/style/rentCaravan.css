@@ -1,5 +1,5 @@
 
-/*aligning the ekements in the outer container*/
+/*aligning the elements in the outer container*/
 .pageContainer{
     display: flex;
     justify-content: center;

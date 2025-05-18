@@ -3,24 +3,20 @@
 /*setting the seize of the image*/
 img {
     width: 300px;
-    height: auto;
     display: block;
 }
 /*positioning the image*/
 #displayImg {
-    float: left;
-    margin-right: 20px;
+    margin-right: 20px; /*gap between text and image*/
 }
 /*the container class around the image and text*/
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    overflow: hidden; 
     font-family: Arial;
     align-items: center;
     display: flex;   /*making the items display inline*/
-    justify-content: center; /*centering the items*/
     gap: 5px; /*the gap between components*/
 
 }
@@ -51,7 +47,6 @@ img {
 }
 /*the page title and return button*/
 .TitleSection{
-    overflow: hidden; 
     font-family: Arial;  /*chagning font*/
     align-items: center;
     display: flex; /*displaying inline*/
