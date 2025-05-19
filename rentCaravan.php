@@ -18,7 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate date range
     if (strtotime($end) <= strtotime($start)) {
-        die("<h2>Invalid date range. Return date must be after start date.</h2>");
+        echo "<h2 style='color:red; text-align:center;'>Invalid date range. Return date must be after start date.</h2>";
+        echo "<div style='text-align:center; margin-top:20px;'><a href='listings.php'>← Back to Listings</a></div>";
+        exit;
     }
 
     // Fetch caravan price and owner
@@ -33,7 +35,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Prevent owner from renting their own caravan
     if ($customer_email === $owner_email) {
-        die("<h2>You cannot rent your own caravan.</h2>");
+        echo "<h2 style='color:red; text-align:center;'>You cannot rent your own caravan.</h2>";
+        echo "<div style='text-align:center; margin-top:20px;'><a href='listings.php'>← Back to Listings</a></div>";
+        exit;
     }
 
     // Calculate total price
@@ -48,9 +52,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $insert->bind_param("ssissds", $rental_id, $owner_email, $caravan_id, $start, $end, $total, $customer_email);
 
     if ($insert->execute()) {
-        echo "<h2>Congratulations! You have rented the caravan from $start to $end for £$total</h2>";
+        echo "<h2 style='text-align:center;'>🎉 Congratulations! You have rented the caravan from $start to $end for <strong>£$total</strong></h2>";
+        echo "<div style='text-align:center; margin-top:20px;'><a href='listings.php'>← Back to Listings</a></div>";
     } else {
-        echo "<h2>Rental failed: " . htmlspecialchars($insert->error) . "</h2>";
+        echo "<h2 style='color:red; text-align:center;'>Rental failed: " . htmlspecialchars($insert->error) . "</h2>";
     }
 
     $insert->close();
@@ -63,22 +68,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Rent Caravan</title>
-    <link rel="stylesheet" href="pages\style\rentCaravan.css"> <!--linking the stylesheet-->
-
+    <link rel="stylesheet" href="pages/style/rentCaravan.css">
 </head>
 <body>
-<div class="pageContainer">    <!--the outer container-->
-    <div class="rentContainer"> <!--the inner container-->
-
-        <h1>Select Dates for Rental</h1> <!--the title-->
-        <form method="POST"> <!--the form -->
-            <label for="start_date">Start Date:</label> <!--two date fields-->
+<div class="pageContainer">
+    <div class="rentContainer">
+        <h1>Select Dates for Rental</h1>
+        <form method="POST">
+            <label for="start_date">Start Date:</label>
             <input type="date" name="start_date" required><br><br>
 
             <label for="end_date">Return Date:</label>
             <input type="date" name="end_date" required><br><br>
 
-            <button type="submit" id="confirmButton">Confirm Rental</button> <!--the submit button-->
+            <button type="submit" id="confirmButton">Confirm Rental</button>
         </form>
     </div>
 </div>

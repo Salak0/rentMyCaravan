@@ -39,8 +39,7 @@ $result = $conn->query($sql);
         <p class="mission-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
     </section>
 
-    <!-- How to Rent Section -->
-    <!-- (Keep your existing step boxes here) -->
+
 
 </div>
 
