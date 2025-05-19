@@ -1,0 +1,45 @@
+
+
+
+.container{ /*outer container centering contents*/
+    justify-content: center;
+    font-family: Arial;
+    display:flex;
+    flex-direction: column; /*making the items go top to bottom*/
+    margin: 30px;
+}
+
+
+.dataRow{
+    
+    text-align: center; /*aligning items*/
+    justify-self: center;
+    justify-content: center;
+    border-radius: 10px; /*making them curved*/
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /*adding box shadow*/
+    
+
+}
+
+.tableBody td{
+    padding: 15px; /*padding between each item of data in the table*/
+
+}
+
+
+.tableBody{
+    border-spacing: 0 15px; /*spacing between each row in table*/
+}
+
+.rowTitles{
+    padding: 20px; /*in between page title and table*/
+}
+
+.navButtons{ /*adding style to the buttons*/
+    margin: 5px;
+    padding: 5px;
+    background-color: #2c6add;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}

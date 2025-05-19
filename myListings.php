@@ -26,7 +26,7 @@ $result = $stmt->get_result();
 <head>
     <meta charset="UTF-8">
     <title>My Listings</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages\style\myListings.css">
 </head>
 <body>
 
@@ -42,7 +42,9 @@ $result = $stmt->get_result();
     <h2>My Caravan Listings</h2>
 
     <?php if ($result->num_rows > 0): ?>
-        <table>
+        <table class="tableBody">
+    <!--table titles-->
+        <div class="rowTitles">
             <tr>
                 <th>Make</th>
                 <th>Model</th>
@@ -51,8 +53,11 @@ $result = $stmt->get_result();
                 <th>Status</th>
                 <th>Actions</th>
             </tr>
+        </div>
+    <!--rows with values from database-->
+            
             <?php while ($row = $result->fetch_assoc()): ?>
-                <tr>
+                <tr class="dataRow">
                     <td><?= htmlspecialchars($row["make"]) ?></td>
                     <td><?= htmlspecialchars($row["model"]) ?></td>
                     <td><?= htmlspecialchars($row["caravan_address"]) ?></td>
@@ -75,18 +80,21 @@ $result = $stmt->get_result();
                                 <button type="submit">Confirm Return</button>
                             </form>
                         <?php endif; ?>
-
+            
+                        <!---buttons-->
                         <!-- Remove Listing -->
-                        <form method="POST" action="removeListing.php" onsubmit="return confirm('Are you sure you want to remove this listing?');">
-                            <input type="hidden" name="caravan_id" value="<?= $row['caravan_id'] ?>">
-                            <button type="submit">Remove</button>
-                        </form>
+                        <div >
+                            <form method="POST" action="removeListing.php" onsubmit="return confirm('Are you sure you want to remove this listing?');">
+                                <input type="hidden" name="caravan_id" value="<?= $row['caravan_id'] ?>">
+                                <button type="submit" class="navButtons">Remove</button>
+                            </form>
 
 
-                        <form method="GET" action="editListing.php">
-                            <input type="hidden" name="caravan_id" value="<?= $row['caravan_id'] ?>">
-                            <button type="submit">Edit</button>
-                        </form>
+                            <form method="GET" action="editListing.php">
+                                <input type="hidden" name="caravan_id" value="<?= $row['caravan_id'] ?>">
+                                <button type="submit" class="navButtons">Edit</button>
+                            </form>
+                        </div>
                     </td>
 
                 </tr>
