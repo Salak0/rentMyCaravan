@@ -1,0 +1,42 @@
+#listingTitle{
+    padding-bottom: 30px; /*space below title*/
+}
+.outerContainer{
+    padding: 100px;
+    justify-content: center;
+    font-family: Arial;
+    display:flex;
+    flex-direction: column; /*making the items go top to bottom*/
+    margin: 30px;
+}
+.container{ /*font and centering the container but not the text*/
+    margin: auto 100px;
+    font-family: Arial;
+    font-weight: bold;
+    padding: 50px;
+    justify-self: center;
+    justify-content: center;
+    border-radius: 10px; /*making them curved*/
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
+
+}
+
+.container label{ /*displayed block to add spacing*/
+    display: block;
+    padding-top: 20px;
+}
+
+
+.navButtons{ /*adding style to the buttons*/
+    margin: 5px;
+    padding: 5px;
+    background-color: #2c6add;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.inpField{ /*making the fields larger to look better*/
+    width: 500px;
+    height: 35px;
+}

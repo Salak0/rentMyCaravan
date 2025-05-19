@@ -65,41 +65,44 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Edit Listing</title>
+    <link rel="stylesheet" href="pages\style\editListing.css">
+
 </head>
 <body>
     
-    <br>
-    <br>
-    <br>
-    <br>
-    <h2>Edit Caravan Listing</h2>
-    <form method="POST" enctype="multipart/form-data">
-        <label>Make:</label><br>
-        <input type="text" name="make" value="<?= htmlspecialchars($caravan['make']) ?>" required><br><br>
+    
+    
+    
+    <div class="outerContainer">
+        <h2 id="listingTitle">Edit Caravan Listing</h2> <!--title-->
+        <form method="POST" enctype="multipart/form-data" class="container"> <!--form full of fields -->
+            <label>Make:</label>
+            <input class="inpField" type="text" name="make" value="<?= htmlspecialchars($caravan['make']) ?>" required>
 
-        <label>Model:</label><br>
-        <input type="text" name="model" value="<?= htmlspecialchars($caravan['model']) ?>" required><br><br>
+            <label>Model:</label>
+            <input class="inpField" type="text" name="model" value="<?= htmlspecialchars($caravan['model']) ?>" required>
 
-        <label>Mileage:</label><br>
-        <input type="number" name="mileage" value="<?= htmlspecialchars($caravan['mileage']) ?>" required><br><br>
+            <label>Mileage:</label>
+            <input class="inpField" type="number" name="mileage" value="<?= htmlspecialchars($caravan['mileage']) ?>" required>
 
-        <label>Price per Day (£):</label><br>
-        <input type="number" step="0.01" name="price_per_day" value="<?= htmlspecialchars($caravan['price_per_day']) ?>" required><br><br>
+            <label>Price per Day (£):</label>
+            <input class="inpField" type="number" step="0.01" name="price_per_day" value="<?= htmlspecialchars($caravan['price_per_day']) ?>" required>
 
-        <label>Description:</label><br>
-        <textarea name="description" required><?= htmlspecialchars($caravan['description']) ?></textarea><br><br>
+            <label>Description:</label>
+            <textarea name="description" required><?= htmlspecialchars($caravan['description']) ?></textarea>
 
-        <label>Transmission Type:</label><br>
-        <select name="trans_type" required>
-            <option value="Manual" <?= $caravan['trans_type'] == 'Manual' ? 'selected' : '' ?>>Manual</option>
-            <option value="Automatic" <?= $caravan['trans_type'] == 'Automatic' ? 'selected' : '' ?>>Automatic</option>
-        </select><br><br>
+            <label>Transmission Type:</label>
+            <select name="trans_type" required>
+                <option value="Manual" <?= $caravan['trans_type'] == 'Manual' ? 'selected' : '' ?>>Manual</option>
+                <option value="Automatic" <?= $caravan['trans_type'] == 'Automatic' ? 'selected' : '' ?>>Automatic</option>
+            </select><br><br>
 
-        <label>Image:</label><br>
-        <input type="file" name="image"><br>
-        <small>Current Image: <?= htmlspecialchars($caravan['image_url']) ?></small><br><br>
+            <label>Image:</label>
+            <input type="file" name="image"><br> <!---submitting image component-->
+            <small>Current Image: <?= htmlspecialchars($caravan['image_url']) ?></small><br><br>
 
-        <button type="submit">Update Listing</button>
-    </form>
+            <button type="submit" class="navButtons">Update Listing</button>
+        </form>
+    </div>
 </body>
 </html>
