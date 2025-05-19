@@ -80,33 +80,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <link rel="stylesheet" href="pages\style\add-caravan.css">
 <script defer src="pages\scripts\addCaravan.js"></script>
 <body>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<form class="form" method="POST" action="addCaravan.php" enctype="multipart/form-data">
-  
-    <h2>Create a caravan listing</h2>
-    <p>Enter caravan information that will appear on the listing.</p>
-  
+  <br>
+  <br>
+  <br>
+  <br>
+  <form class="form" id="caravan-form" method="POST" action="addCaravan.php" enctype="multipart/form-data">
+    
+      <h2>Create a caravan listing</h2>
+      <br>
+      <p>Enter caravan information that will appear on the listing.</p>
+    
 
-  <div class="body">
-    <div class="pagination">
-      <div class="number">1</div>
-      <div class="bar"></div>
-      <div class="number">2</div>
-      <div class="bar"></div>
-      <div class="number">3</div>
-      <div class="bar"></div>
-      <div class="number">4</div>
-      <div class="bar"></div>
-      <div class="number">5</div>
+    <div class="body">
+      <div class="pagination">
+        <div class="number">1</div>
+        <div class="bar"></div>
+        <div class="number">2</div>
+        <div class="bar"></div>
+        <div class="number">3</div>
+        <div class="bar"></div>
+        <div class="number">4</div>
+        <div class="bar"></div>
+        <div class="number">5</div>
+      </div>
     </div>
-  </div>
-
 
     <div class="steps">
       <!-- Step 1 -->
@@ -118,7 +115,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="grid">
           <div class="col">
             <label for="reg">Registration Number</label>
+<<<<<<< Updated upstream
             <input type="text" id="reg" name="reg" required>
+=======
+            <input type="text" id="reg" name="name" required>
+            <div class="error"></div>
+>>>>>>> Stashed changes
           </div>
         </div>
         <div class="navigation">
@@ -137,6 +139,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="radio">
               <input type="radio" id="body-trailer" name="caravan_type" value="Trailer Caravan">
               <label for="body-trailer">Trailer Caravan</label>
+              <div class="error"></div>
             </div>
           </div>
           <div class="col">
@@ -147,19 +150,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
           <div class="col">
             <label for="make">Make</label>
-            <input type="text" id="make" name="make" required>
+            <input type="text" id="make" name="make" >
+            <div class="error"></div>
           </div>
           <div class="col">
             <label for="model">Model</label>
-            <input type="text" id="model" name="model" required>
+            <input type="text" id="model" name="model" >
+            <div class="error"></div>
           </div>
           <div class="col">
             <label for="year">Year</label>
             <input type="number" id="year" name="year">
+            <div class="error"></div>
           </div>
           <div class="col">
             <label for="mileage">Mileage</label>
             <input type="number" id="mileage" name="mileage">
+            <div class="error"></div>
           </div>
       
           <div class="col">
@@ -170,6 +177,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <label for="trans-auto">Automatic</label>
               <input type="radio" id="trans-manual" name="trans_type" value="Manual">
               <label for="trans-manual">Manual</label>
+              <div class="error"></div>
             </div>
           </div>
           <div class="col sleep-col">
@@ -212,12 +220,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br>
           
         <p><label for="description">Tell us more about your caravan and what makes it special</label></p>
-        <textarea name="description" id="description" rows="6" cols="60" required></textarea>
-        
+        <textarea name="description" id="description" rows="6" cols="60" ></textarea>
+        <div class="error"></div>
         <br>
         <br>
         <p>Upload images of your caravan here</p>
         <input type="file" id="caravanImage" name="caravanImage" required>
+        <div class="error"></div>
         <div class="navigation">
           <button type="button" class="prev">Previous</button>
           <button type="button" class="next">Next</button>
@@ -236,10 +245,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <div class="col">
             <label for="address1">Address Line 1</label>
             <input type="text" id="address1" name="caravan_address" required>
+            <div class="error"></div>
           </div>
           <div class="col">
             <label for="postcode">Postcode</label>
             <input type="text" id="postcode" name="caravan_postcode" required>
+            <div class="error"></div>
           </div>
         </div>
         <div class="navigation">
@@ -259,6 +270,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <div class="col">
             <label for="price">Price per day</label>
             <input type="number" id="price" name="price_per_day" step="0.01" required>
+            <div class="error"></div>
           </div>
         </div>
         <div class="navigation">

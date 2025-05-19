@@ -39,7 +39,32 @@ $result = $conn->query($sql);
         <p class="mission-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
     </section>
 
-
+    <!-- Instruction Section -->
+        <section class="how-to-rent">
+            <h2 class="section-title">How to Rent a Caravan</h2>
+            <div class="steps-container">
+                <div class="step-box">
+                    <div class="step-number">1</div>
+                    <h3>Browse Our Selection</h3>
+                    <p>Browse through our selection of caravans and find one you'd like.</p>
+                </div>
+                <div class="step-box">
+                    <div class="step-number">2</div>
+                    <h3>Book Your Caravan</h3>
+                    <p>Book the caravan by filling in some details.</p>
+                </div>
+                <div class="step-box">
+                    <div class="step-number">3</div>
+                    <h3>Pick Up</h3>
+                    <p>Pick up the caravan from the agreed location.</p>
+                </div>
+                <div class="step-box">
+                    <div class="step-number">4</div>
+                    <h3>Begin Your Adventure</h3>
+                    <p>Set off and enjoy your caravan adventure!</p>
+                </div>
+            </div>
+        </section>
 
 </div>
 
