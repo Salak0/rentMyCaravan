@@ -1,0 +1,21 @@
+.rental-item{
+
+    
+    margin-top: 100px; /*stops clashes with header*/
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    width: 400px;
+    flex-direction: row;
+    
+
+}
+
+.outerContainer{
+    display: inline-flex;
+    gap: 10px;
+    padding: 15px;
+    
+    flex-direction: row;
+}

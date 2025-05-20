@@ -27,27 +27,25 @@ $result = $stmt->get_result();
 <html>
 <head>
     <title>My Rentals</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages\style\myRental.css">
 </head>
 <body>
     
-<br>
-    <br>
-    <br>
-    <br>
-    <br>
-     
+
 <h1>My Rented Caravans</h1>
 
 <?php if ($result->num_rows > 0): ?>
     <?php while ($row = $result->fetch_assoc()): ?>
-        <div class="rental-item">
-            <h2><?= htmlspecialchars($row['make']) ?></h2>
-            <img src="<?= htmlspecialchars($row['image_url']) ?>" width="300">
-            <p><?= htmlspecialchars($row['description']) ?></p>
-            <p><strong>From:</strong> <?= $row['loan_date'] ?> | <strong>To:</strong> <?= $row['return_date'] ?></p>
-            <p><strong>Total Price:</strong> £<?= $row['total_price'] ?></p>
-            <p><strong>Status:</strong> <?= $row['isReturned'] ? 'Returned' : 'Ongoing' ?></p>
+
+        <div class="outerContainer">
+            <div class="rental-item">
+                <h2><?= htmlspecialchars($row['make']) ?></h2>
+                <img src="<?= htmlspecialchars($row['image_url']) ?>">
+                <p><?= htmlspecialchars($row['description']) ?></p>
+                <p><strong>From:</strong> <?= $row['loan_date'] ?> | <strong>To:</strong> <?= $row['return_date'] ?></p>
+                <p><strong>Total Price:</strong> £<?= $row['total_price'] ?></p>
+                <p><strong>Status:</strong> <?= $row['isReturned'] ? 'Returned' : 'Ongoing' ?></p>
+            </div>
         </div>
     <?php endwhile; ?>
 <?php else: ?>
