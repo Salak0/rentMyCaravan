@@ -2,6 +2,7 @@ let currentStep = 0;
 const steps = document.querySelectorAll(".step");
 const numbers = document.querySelectorAll(".pagination .number");
 
+// Step progress indicator at the top
 function showStep(index) {
   steps.forEach((step, i) => {
     step.classList.toggle("active", i === index);
@@ -9,7 +10,7 @@ function showStep(index) {
   });
 }
 
-// Validation helpers 
+// Error variable for error indication + message
 const setError = (element, message) => {
   const formGroup = element.closest(".form-group") || element.parentElement;
   const errorDisplay = formGroup.querySelector(".error");
@@ -19,6 +20,7 @@ const setError = (element, message) => {
   formGroup.classList.remove("success");
 };
 
+// Success variable for success indication
 const setSuccess = element => {
   const formGroup = element.closest(".form-group") || element.parentElement;
   const errorDisplay = formGroup.querySelector(".error");
@@ -28,11 +30,12 @@ const setSuccess = element => {
   formGroup.classList.remove("error");
 };
 
-// Step-by-step validation
+// Step 1 - Caravan reg
 function validateStep1() {
   const reg = document.getElementById("reg");
   let valid = true;
 
+  // Ensure at least 2 characters
   if (reg.value.trim() === "" || reg.value.length < 2 || !/^[A-Za-z0-9]*$/.test(reg.value)) {
     setError(reg, "Registration number is required");
     valid = false;
@@ -44,8 +47,10 @@ function validateStep1() {
 }
 
 
-// Field Variebles
+// Step 2 - Caravan details
 function validateStep2() {
+
+  // Field Variebles
   const make = document.getElementById("make");
   const model = document.getElementById("model");
   const year = document.getElementById("year");
@@ -111,6 +116,7 @@ function validateStep2() {
   return valid;
 }
 
+// Step 3 - Description and images
 function validateStep3() {
   const description = document.getElementById("description");
   let valid = true;
@@ -125,6 +131,7 @@ function validateStep3() {
   return valid;
 }
 
+// Step 4 - Location
 function validateStep4() {
   const address1 = document.getElementById("address1");
   const city = document.getElementById("city");
@@ -150,6 +157,7 @@ function validateStep4() {
   return valid;
 }
 
+// Step 5 - Price
 function validateStep5() {
   const price = document.getElementById("price");
   let valid = true;
@@ -164,6 +172,7 @@ function validateStep5() {
   return valid;
 }
 
+// Variable to store validation functions
 const validators = [
   validateStep1,
   validateStep2,
@@ -172,10 +181,11 @@ const validators = [
   validateStep5
 ];
 
-// DOM load
+// Reg form navigation next/previous
 document.addEventListener("DOMContentLoaded", () => {
   showStep(currentStep);
 
+  // Next button
   document.querySelectorAll(".next").forEach(btn => {
     btn.addEventListener("click", () => {
       const validator = validators[currentStep];
@@ -188,6 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Previous button
   document.querySelectorAll(".prev").forEach(btn => {
     btn.addEventListener("click", () => {
       if (currentStep > 0) {
@@ -197,6 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Prevent submission if step 5 is invalid
   const form = document.querySelector("form");
   form.addEventListener("submit", (e) => {
     if (!validateStep5()) {

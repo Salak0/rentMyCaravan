@@ -1,3 +1,4 @@
+// Field Variables
 const form = document.getElementById("registration-form")
 const firstName = document.getElementById("firstName")
 const lastName = document.getElementById("lastName")
@@ -9,12 +10,14 @@ const repeatPassword = document.getElementById("repeatPassword")
 const termsCheckbox = document.getElementById("termsConditions")
 const error = document.getElementById("error")
 
+// Prevent default submission to validate each field
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     validateInput();
 });
 
+// Error variable for error indication + message
 const setError = (element, message) => {
     const form_group = element.parentElement;
     const errorDisplay = form_group.querySelector(".error");
@@ -24,6 +27,7 @@ const setError = (element, message) => {
     form_group.classList.remove("success");
 }
 
+// Success variable for success indication
 const setSuccess = element => {
     const form_group = element.parentElement;
     const errorDisplay = form_group.querySelector(".error");
@@ -33,6 +37,7 @@ const setSuccess = element => {
     form_group.classList.remove("error")
 }
 
+// Email validation variable
 const isValidEmail = email => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
@@ -51,13 +56,15 @@ const validateInput = () => {
 
     let valid = true;
 
+    // First name validation
     if(firstNameValue === ""){
         setError(firstName, "First name required");
         valid = false;
     } else {
         setSuccess(firstName);
     }
-
+    
+    // Last name validation
     if(lastNameValue === ""){
         setError(lastName, "Last name required");
         valid = false;
@@ -65,7 +72,7 @@ const validateInput = () => {
         setSuccess(lastName);
     }
 
-
+    // Email validation
     if(emailValue === ""){
         setError(email, "Email is required");
         valid = false;
@@ -76,6 +83,7 @@ const validateInput = () => {
         setSuccess(email);
     }
 
+    // Postcode validation
     if (postcodeValue === "") {
         setError(postcode, "Postcode required");
         valid = false;
@@ -85,7 +93,8 @@ const validateInput = () => {
     } else {
         setSuccess(postcode);
     }
-
+    
+    // Address validation
     if (addressValue === "") {
         setError(address, "Address required");
         valid = false;
@@ -93,17 +102,18 @@ const validateInput = () => {
         setSuccess(address);
     }
 
-
+    // Password validation
     if (passwordValue === "") {
         setError(password, "Password required");
         valid = false;
-    } else if (passwordValue.length < 6) {
+    } else if (passwordValue.length < 6) { // Password length validation
         setError(password, "Password must be at least 6 characters");
         valid = false;
     } else {
         setSuccess(password);
     }
 
+    // Password repeat validation
     if (repeatPasswordValue === "") {
         setError(repeatPassword, "Repeat your password");
         valid = false;
@@ -113,7 +123,8 @@ const validateInput = () => {
     } else {
         setSuccess(repeatPassword);
     }
-
+    
+    // Terms and service checkbox validation
     if (!termsCheckboxTicked) {
         setError(termsCheckbox, "You must agree to the terms");
         valid = false;
@@ -121,8 +132,8 @@ const validateInput = () => {
         setSuccess(termsCheckbox);
     }
 
+    // Form submission
     if (valid) {
-        alert("Registration successful!");
         form.submit();
     }
 }
