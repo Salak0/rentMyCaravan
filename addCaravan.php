@@ -115,12 +115,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="grid">
           <div class="col">
             <label for="reg">Registration Number</label>
-<<<<<<< Updated upstream
-            <input type="text" id="reg" name="reg" required>
-=======
             <input type="text" id="reg" name="name" required>
             <div class="error"></div>
->>>>>>> Stashed changes
           </div>
         </div>
         <div class="navigation">
