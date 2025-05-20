@@ -13,32 +13,8 @@ $result = $conn->query($sql);
 <html>
 <head>
     <title>Caravan Listings</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .listing-link {
-            text-decoration: none;
-            color: inherit;
-        }
-        .listing {
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin: 15px;
-            width: 320px;
-            display: inline-block;
-            vertical-align: top;
-            background-color: #fdfdfd;
-            transition: box-shadow 0.3s;
-        }
-        .listing:hover {
-            box-shadow: 0 0 10px #ccc;
-            background-color: #f9f9f9;
-            cursor: pointer;
-        }
-        .listing img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="pages\style\listings.css">
+
 </head>
 <body>
     <br>
