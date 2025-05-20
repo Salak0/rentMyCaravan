@@ -11,7 +11,7 @@ $loggedIn = isset($_SESSION["email_id"]);
 <head>
     <meta charset="UTF-8">
     <title>RentACaravan</title>
-    <link rel="stylesheet" href="pages\style\index.css"> <!-- Adjust if your stylesheet has a different name -->
+    <link rel="stylesheet" href="pages\style\index.css"> <!-- Linked Stylesheet -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <body>
@@ -33,8 +33,6 @@ $loggedIn = isset($_SESSION["email_id"]);
         
             
             <?php endif; ?>
-
-            
                 <?php if ($loggedIn): ?>
                    <span class="welcome-msg" style="color:rgb(208, 221, 243); font-style: italic; font-weight: 400; margin-left: 20px;">
                          Welcome,<br> <?= htmlspecialchars($_SESSION["email_id"]); ?>
@@ -51,19 +49,5 @@ $loggedIn = isset($_SESSION["email_id"]);
                     </div>
                 <?php endif; ?>
             </div>
-
         </div>
-        
-    
     </header>
-        
-        
-        
-        
-
-
-        <!-- Login/Register or Logout -->
-       
-    
-    
-

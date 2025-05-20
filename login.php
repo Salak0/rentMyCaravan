@@ -1,5 +1,5 @@
 <?php
-require('db.php'); // Ensure this file connects to the database
+require('db.php'); 
 include('header.php');
 
 $loginError = '';
@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Basic sanitization
+    // Sanitizing the inputs
     $email = mysqli_real_escape_string($conn, $email);
 
     $sql = "SELECT * FROM users WHERE email_id = '$email'";
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user = mysqli_fetch_assoc($result);
         if (password_verify($password, $user['password'])) {
             $_SESSION['email_id'] = $user['email_id'];
-            header("Location: index.php"); // Redirect to dashboard
+            header("Location: index.php"); 
             exit();
         } else {
             $loginError = "Invalid password.";

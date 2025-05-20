@@ -1,8 +1,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  
+  padding: 20px;
+  background: white;
 }
 
 .form {
@@ -10,7 +10,7 @@ body {
   padding: 30px;
   max-width: 800px;
   margin: 0 auto;
-  border-radius: 8px;
+  border-radius: 8px; 
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
@@ -18,13 +18,13 @@ body {
   margin-top: 0;
 }
 
-.pagination {
+.pagination { /* Step progress styling */
   display: flex;
   align-items: center;
   margin: 20px 0;
 }
 
-.pagination .number {
+.pagination .number { /* Making the step numbers round and inline*/
   background: #ccc;
   color: #fff;
   border-radius: 50%;
@@ -44,14 +44,14 @@ body {
 
 .pagination .number.active,
 .pagination .bar.active {
-  background: #2c6add;
+  background: #2c6add; /* Colour change for finished and current step*/
 }
 
 .steps .step {
   display: none;
 }
 
-.steps .step.active {
+.steps .step.active { /*Small fade in animation when form appears*/
   display: block;
   animation: fadeIn 0.3s ease-in-out;
 }
@@ -70,7 +70,7 @@ body {
   display: none; 
 }
 
-.radio label {
+.radio label { /*Making radio buttons big and round */
   width: 100%;
   padding: 15px;
   border: 1px solid #bbb;
@@ -79,7 +79,7 @@ body {
   cursor: pointer;
 }
 
-.radio input:checked + label{
+.radio input:checked + label{ /*Making radio buttons blue when selected*/
   background: #2c6add;
   color: #fff;
 }
@@ -109,7 +109,7 @@ textarea {
   justify-content: space-between;
 }
 
-.navigation button {
+.navigation button { /*Making navigation buttons blue and rounded*/
   padding: 10px 20px;
   background: #2c6add;
   color: white;
@@ -123,15 +123,15 @@ textarea {
   cursor: default;
 }
 
-.error input, .error select, .error textarea {
+.error input, .error select, .error textarea { /*Making fields red if input invalid*/
   border: 2px solid red;
 }
 
-.success input, .success select, .success textarea {
+.success input, .success select, .success textarea { /*Making fields green if input valid*/
   border: 2px solid green;
 }
 
-.error .error {
+.error .error { /*Error text colour*/
   color: red;
   font-size: 0.9rem;
   margin-top: 5px;

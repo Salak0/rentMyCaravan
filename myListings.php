@@ -9,7 +9,7 @@ if (!isset($_SESSION["email_id"])) {
 
 $ownerEmail = $_SESSION["email_id"];
 
-// Fetch caravans owned by the logged-in user with current rental status
+// Show caravans owned by the logged-in user with current rental status
 $sql = "SELECT c.caravan_id, c.make, c.model, c.caravan_address, c.price_per_day,
                r.customer_id, r.loan_date, r.return_date, r.isReturned
         FROM caravans c
@@ -35,8 +35,6 @@ $result = $stmt->get_result();
     <br>
     <br>
     <br> 
-    
-    
 
 <div class="container">
     <h2>My Caravan Listings</h2>
@@ -54,8 +52,8 @@ $result = $stmt->get_result();
                 <th>Actions</th>
             </tr>
         </div>
-    <!--rows with values from database-->
-            
+    
+    <!--rows with values from database--> 
             <?php while ($row = $result->fetch_assoc()): ?>
                 <tr class="dataRow">
                     <td><?= htmlspecialchars($row["make"]) ?></td>
@@ -81,7 +79,6 @@ $result = $stmt->get_result();
                             </form>
                         <?php endif; ?>
             
-                        <!---buttons-->
                         <!-- Remove Listing -->
                         <div >
                             <form method="POST" action="removeListing.php" onsubmit="return confirm('Are you sure you want to remove this listing?');">

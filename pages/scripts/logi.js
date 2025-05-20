@@ -59,7 +59,6 @@ const validateInput = () => {
     }
 
     if (valid) {
-        alert("Login successful!");
         form.submit();
     }
 }

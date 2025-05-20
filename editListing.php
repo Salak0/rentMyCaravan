@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $targetPath = "uploads/" . $imageName;
         move_uploaded_file($_FILES["image"]["tmp_name"], $targetPath);
     } else {
-        $targetPath = $caravan["image_url"]; // Keep the old image
+        $targetPath = $caravan["image_url"]; // Keep old image
     }
 
     $updateSql = "UPDATE caravans SET make = ?, model = ?, mileage = ?, price_per_day = ?, description = ?, trans_type = ?, image_url = ? WHERE caravan_id = ? AND email_id = ?";
@@ -69,13 +69,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 </head>
 <body>
-    
-    
-    
-    
     <div class="outerContainer">
-        <h2 id="listingTitle">Edit Caravan Listing</h2> <!--title-->
-        <form method="POST" enctype="multipart/form-data" class="container"> <!--form full of fields -->
+        <!--title-->
+        <h2 id="listingTitle">Edit Caravan Listing</h2> 
+
+        <!--form fields -->
+        <form method="POST" enctype="multipart/form-data" class="container"> 
             <label>Make:</label>
             <input class="inpField" type="text" name="make" value="<?= htmlspecialchars($caravan['make']) ?>" required>
 
@@ -97,8 +96,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <option value="Automatic" <?= $caravan['trans_type'] == 'Automatic' ? 'selected' : '' ?>>Automatic</option>
             </select><br><br>
 
+            <!---submitting image component-->
             <label>Image:</label>
-            <input type="file" name="image"><br> <!---submitting image component-->
+            <input type="file" name="image"><br> 
             <small>Current Image: <?= htmlspecialchars($caravan['image_url']) ?></small><br><br>
 
             <button type="submit" class="navButtons">Update Listing</button>

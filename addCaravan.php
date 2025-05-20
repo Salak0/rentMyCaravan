@@ -68,12 +68,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <title>Caravan Listing Form</title>
@@ -189,17 +183,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <option value="7">7</option>
                 <option value="8">8</option>
                 <option value="more">8+</option>
-              </select>
-            </div>
-          </div>
-          <div class="col fuel-col">
-            <div class="fuel">
-              <label for="fuel">Fuel Type</label>
-              <select id="fuel" name="fuel">
-                <option value="Petrol">Petrol</option>
-                <option value="Diesel">Diesel</option>
-                <option value="LPG">LPG</option>
-                <option value="Electric">Electric</option>
               </select>
             </div>
           </div>

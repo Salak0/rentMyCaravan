@@ -1,8 +1,8 @@
 <?php
 include('header.php');
-require 'db.php'; // Make sure this connects to your MySQL database
+require 'db.php'; 
 
-// Fetch 3 random caravans
+// Fetch 3 caravans
 $sql = "SELECT caravan_id, make, model, sleeps, image_url FROM caravans ORDER BY RAND() LIMIT 3";
 $result = $conn->query($sql);
 ?>

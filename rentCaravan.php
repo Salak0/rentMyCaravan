@@ -16,14 +16,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $start = $_POST['start_date'];
     $end = $_POST['end_date'];
 
-    // Validate date range
+    // Validate date 
     if (strtotime($end) <= strtotime($start)) {
         echo "<h2 style='color:red; text-align:center;'>Invalid date range. Return date must be after start date.</h2>";
         echo "<div style='text-align:center; margin-top:20px;'><a href='listings.php'>← Back to Listings</a></div>";
         exit;
     }
 
-    // Fetch caravan price and owner
+    // SHow caravan price and owner
     $stmt = $conn->prepare("SELECT price_per_day, email_id FROM caravans WHERE caravan_id = ?");
     $stmt->bind_param("i", $caravan_id);
     $stmt->execute();
