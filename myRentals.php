@@ -9,7 +9,7 @@ if (!isset($_SESSION['email_id'])) {
 
 $customer_id = $_SESSION['email_id'];
 
-// Fetch rentals for this customer
+// Show rentals for this customer
 $sql = "SELECT r.rental_id, r.caravan_id, r.loan_date, r.return_date, r.isReturned, r.total_price,
                c.make, c.model, c.description, c.caravan_address, c.price_per_day
         FROM rentals r

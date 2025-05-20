@@ -13,7 +13,7 @@ body {
 }
 
 
-.form-container {
+.form-container { /*Form container*/
     background-color: rgba(255, 255, 255, 0.70);
     max-width: 800px;
     margin: 0 auto;

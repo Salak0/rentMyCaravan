@@ -2,6 +2,7 @@
 <footer class="footer">
     <div class="footer-info">
 
+        <!--- Socials section-->
         <section id="socials">
             <h2>Follow us</h2>
             <br>
@@ -12,6 +13,7 @@
             <h4>X</h4>
         </section>
 
+        <!--- Contact section-->
         <section id="contact">
             <h2>Contact Us</h2>
             <br>
@@ -22,6 +24,7 @@
             <h4>Post Address: Cardiff, 142 Ross Road,<br>CF14 3BA </h4>
         </section>
 
+        <!--- Help Sections-->
         <section id="help">
             <h2>Need Help?</h2>
             <br>

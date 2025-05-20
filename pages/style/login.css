@@ -10,7 +10,7 @@ body {
     height: 109vh
 }
 
-.login-container {
+.login-container { /*Login container*/
     width: 350px; 
     margin: 100px auto; 
     padding: 25px;
@@ -20,13 +20,13 @@ body {
     text-align: left;
 }
 
-.login-container h2 {
+.login-container h2 { /*Login title*/
     margin-bottom: 20px;
     font-size: 24px;
     font-weight: bold;
 }
 
-.login-container input {
+.login-container input { /*Login input fields*/
     width: 100%;
     padding: 10px;
     margin: 8px 0;
@@ -39,7 +39,7 @@ label {
     font-weight: bold;
 }
 
-.inputValidation {
+.inputValidation { /*Validation colour border*/
     flex-direction: column;
     padding: 0 10px;
     margin-bottom: 15px;
@@ -56,21 +56,21 @@ label {
     outline: 0;
 }
 
-.inputValidation.success input {
+.inputValidation.success input { /*Valid input border*/
     border-color: #09c372;
 
 }
 
-.inputValidation.error input {
+.inputValidation.error input { /*Invalid input border*/
     border-color: #ff3860;
 
 }
 
-.error .error {
+.error .error { /*Error text colour*/
     color: #ff3860;
 }
 
-.login-container button {
+.login-container button { /*Login button*/
     width: 100%;
     padding: 12px;
     background: #007bff;
