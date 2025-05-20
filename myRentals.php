@@ -11,7 +11,7 @@ $customer_id = $_SESSION['email_id'];
 
 // Show rentals for this customer
 $sql = "SELECT r.rental_id, r.caravan_id, r.loan_date, r.return_date, r.isReturned, r.total_price,
-               c.make, c.model, c.description, c.caravan_address, c.price_per_day
+               c.make, c.model, c.description, c.caravan_address, c.price_per_day, c.image_url
         FROM rentals r
         JOIN caravans c ON r.caravan_id = c.caravan_id
         WHERE r.customer_id = ? AND r.isReturned = 0";
@@ -40,7 +40,7 @@ $result = $stmt->get_result();
         <div class="outerContainer">
             <div class="rental-item">
                 <h2><?= htmlspecialchars($row['make']) ?></h2>
-                <img src="<?= htmlspecialchars($row['image_url']) ?>">
+                <img src="<?= htmlspecialchars($row['image_url']) ?>" alt="Caravan Image" width="300">
                 <p><?= htmlspecialchars($row['description']) ?></p>
                 <p><strong>From:</strong> <?= $row['loan_date'] ?> | <strong>To:</strong> <?= $row['return_date'] ?></p>
                 <p><strong>Total Price:</strong> £<?= $row['total_price'] ?></p>
