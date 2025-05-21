@@ -3,65 +3,78 @@ include('header.php');
 ?>
 
 <!DOCTYPE html>
-<meta charset="UTF-8">
 <html lang="en">
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=login" />
 
-
-    <link rel="stylesheet" href="pages/style/aboutUs.css">
-
-
+<head>
+    <meta charset="UTF-8">
+    <title>RentACaravan</title>
+    <link rel= "stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
 <body>
-    <div class="AboutUsPage">
-        <div id="HeadingBorder">
-            <h1 id="PageTitle"><a href="index.html">RentMyCaravan</a></h1> <!-- title -->
+    <header class="header">
+        <h2 class="logo">RentACaravan</h2>
+        <div class="nav-links">
+            <a href="login.php" class="nav-link">Login</a>
+            <a href="register.php" class="nav-link">Register</a>
+            <a href="index.php" class="nav-link">Home</a>
+            <a href="aboutUs.php" class="nav-link">About Us</a>
         </div>
+    </header>
+
+    <div class="AboutUsPage">
+
+        <div id="HeadingBorder">
+            <h1 id="PageTitle"><a href="index.html">RentMyCaravan</a></h1>
+        </div>
+
         <div id="text-body">
             <h2 id="AboutUsTitle">About Us</h2>
-            <p id="AboutUsIntro"> Rent  my caravan has been the UKs No1 caravan renting site for 15 years,
-                thank to our family values, that we have been incorporating throughout 
-                the whole of our business.
-                which started in 2005 when Eddie Bican, the founder of rentMyCaravan was 
-                trying to find a way to keep his prized caravan instead of selling it.  
-                <!--the caravan image-->
-                <img id="caravanImg" src="pages\style\caravan1.jpg" alt="caravan1">
+            <div class="section-flex">
+                <p id="AboutUsIntro">
+                    Rent my caravan has been the UK's No.1 caravan renting site for 15 years,
+                    thanks to our family values that we have been incorporating throughout 
+                    our business. It started in 2005 when Eddie Bican, the founder of RentMyCaravan,
+                    was trying to find a way to keep his prized caravan instead of selling it.
+                </p>
+            </div>
+        </div>
 
-            </p>
-            <h5 id="OurValuesTitle">Our Values</h5>
-            <p id="OurValues">
-                <img src="pages\style\oldPeopleWIthCaravan.jpg" alt="elderlyOurValuesPage">
+        
+        <div class="content-container card-container">
+            <div class="section-flex">
+                <div>
+                    <h5 id="OurValuesTitle">Our Values</h5>
+                    <p id="OurValues">
+                        At RentMyCaravan, our core values revolve around creating the most seamless
+                         connection between sellers and buyers. We’re dedicated to delivering a smooth,
+                        enjoyable experience for everyone involved. Whether you're listing your caravan
+                        or looking to hire one, you can count on us to get it right—every time. 
+                        For buyers and sellers alike, RentMyCaravan is where convenience meets trust.
+                    </p>
+                    <img src="pages/style/oldPeopleWIthCaravan.jpg" alt="Elderly with Caravan">
+                </div>
+            </div>
+        </div>
 
-                Our values are to make sure we can connect seller to buyer
-                in the most streamlined fashion as possible. So that we can
-                provide a pleasant user experience to all of our customers,
-                For Buyer and seller alike, rentMyCaravan will do it right!
-
-            </p>
-
-            <h5 id="OurCompanyTitle">Our Company</h5>
-            <p id="OurCompany">
-                <img id="companyImg" src="pages\style\elderlyOurValuesPage.jpg" alt="elderlyOurValuesPage">
-
-                Our values are to make sure we can connect seller to buyer
-                in the most streamlined fashion as possible. So that we can
-                provide a pleasant user experience to all of our customers,
-                For Buyer and seller alike, rentMyCaravan will do it right!
-
-            </p>
-
-            
+        
+        <div class="content-container card-container">
+            <div class="section-flex">
+                <div>
+                    <h5 id="OurCompanyTitle">Our Company</h5>
+                    <p id="OurCompany">
+                        Our mission is to seamlessly connect sellers with buyers through a smooth, 
+                        hassle-free experience. We're committed to delivering exceptional customer 
+                        service and fostering lasting trust within the caravan community—bringing people
+                         together through reliability, transparency, and shared passion for life on the road.
+                    </p>
+                    <img src="pages/style/elderlyOurValuesPage.jpg" alt="Company Image">
+                </div>
+            </div>
         </div>
 
     </div>
-    
-
-    
-
-
 </body>
-
-
 
 </html>

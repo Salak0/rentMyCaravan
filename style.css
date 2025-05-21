@@ -114,5 +114,46 @@ button:hover {
 }
 
 h2 {
-    color: #2e8b57;
+    color: #2e858b;
+    margin-left: 25px;
+}
+
+p {
+    margin-left: 25px;
+
+}
+
+.section-flex {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section-flex img {
+  max-width: 300px; 
+  height: auto;
+  border-radius: 10px; 
+}
+
+.card-container {
+  background-color: #f9f7f7;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+
+.card-container img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+#AboutUsIntro, #OurValues, #OurCompany {
+  font-size: 1em;
+  line-height: 1.6;
 }
