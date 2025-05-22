@@ -13,21 +13,16 @@ include('header.php');
 </head>
 
 <body>
-    <header class="header">
-        <h2 class="logo">RentACaravan</h2>
-        <div class="nav-links">
-            <a href="login.php" class="nav-link">Login</a>
-            <a href="register.php" class="nav-link">Register</a>
-            <a href="index.php" class="nav-link">Home</a>
-            <a href="aboutUs.php" class="nav-link">About Us</a>
-        </div>
-    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
     <div class="AboutUsPage">
 
-        <div id="HeadingBorder">
-            <h1 id="PageTitle"><a href="index.html">RentMyCaravan</a></h1>
-        </div>
+       
 
         <div id="text-body">
             <h2 id="AboutUsTitle">About Us</h2>
